@@ -17,16 +17,14 @@
 <!-- =================== HEADER =================== -->
 <header>
   <div class="hdr">
-    <a href="#" class="logo">
-      <span class="logo-main">⚡ VORTIX</span>
-      <span class="logo-sub">✨ studio</span>
-    </a>
+
+<a href="#" class="logo">
+  <img src="./images/logo-claro.png" alt="VortiX Studio" class="logo-img-nav"/>
+</a>
     <nav>
       <a href="#" class="active" data-i18n="nav_home" data-sticker="🏠">Inicio</a>
       <a href="#catalog" data-i18n="nav_catalog">Catálogo</a>
-      <a href="#categories" data-i18n="nav_cat">Categorías</a>
-      <a href="#" data-i18n="nav_new">Nuevos</a>
-      <a href="#" data-i18n="nav_about">Sobre Nosotros</a>
+      <a href="#about" data-i18n="nav_about">Sobre Mí</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-left:auto;">
       <div class="srch">
@@ -63,6 +61,7 @@
       <h1 class="hero-h1">
         <span class="h1-l1" data-i18n="hero_l1">BIENVENIDO A</span><br/>
         <span class="h1-l2" data-i18n="hero_l2">VORTIX STUDIO</span><br/>
+        <br>
         <span class="h1-l1" style="font-size:.6em;color:rgba(255,254,242,.8);" data-i18n="hero_l3">donde las ideas toman forma</span>
       </h1>
       <p class="hero-tagline" data-i18n="hero_desc">Modelos 3D épicos, figuras<br/>increíbles &amp; accesorios únicos.<br/>¡Diseñados para ti! 🎮</p>
@@ -106,6 +105,67 @@
   </div>
 </div>
 
+<!-- =================== SOBRE NOSOTROS =================== -->
+<section class="about-section" id="about">
+  <div class="about-box rev">
+
+    <!-- cintas decorativas -->
+    <div class="tc tc1" data-i18n="ab_tc1">⚡ EL CREADOR</div>
+    <div class="tc tc2" data-i18n="ab_tc2">desde 2023 🚀</div>
+
+    <div class="about-inner">
+
+    <!-- HEADER -->
+    <div class="about-header rev">
+      <div class="about-eyebrow" data-i18n="ab_eyebrow">✦ EL CREADOR</div>
+      <h2 class="about-title" data-i18n="ab_title">SOBRE MÍ 🎨</h2>
+      <p class="about-subtitle" data-i18n="ab_sub">un apasionado del 3D, los colores y la creatividad detrás de todo esto</p>
+    </div>
+
+    <!-- MISIÓN -->
+    <div class="about-mission rev" style="transition-delay:.08s">
+      <div class="mission-tape" data-i18n="ab_mission_tape">🎯 MI MISIÓN</div>
+      <blockquote class="mission-quote" data-i18n="ab_mission_q">"Quiero que cada persona pueda tener en sus manos el personaje que lleva en la imaginación. El 3D no es solo tecnología — es magia tangible."</blockquote>
+      <div class="mission-author" data-i18n="ab_mission_auth">— Facundo, VortiX Studio ⚡</div>
+    </div>
+
+    <!-- CREATOR CARD (centrada) -->
+    <div style="display:flex;justify-content:center;">
+      <div class="team-card rev" style="--tc-color:#00E5FF;--tc-rot:0deg;max-width:320px;width:100%;transition-delay:.1s">
+        <div class="team-card-pin">📌</div>
+        <div class="team-avatar">🧑‍💻</div>
+        <div class="team-name" data-i18n="t1_name">FACUNDO</div>
+        <div class="team-role" data-i18n="t1_role">Fundador & Creador</div>
+        <p class="team-desc" data-i18n="t1_desc">Diseñador, impresor y el alma detrás de cada modelo. Vive rodeado de filamento PLA y música. Convierte ideas en objetos reales.</p>
+        <div class="team-badge" data-i18n="t1_badge">⚡ El único, el inigualable</div>
+      </div>
+    </div>
+
+    <!-- VALORES -->
+    <div class="about-values rev" style="transition-delay:.12s">
+      <div class="values-tape" data-i18n="ab_val_tape">✨ LO QUE NOS MUEVE</div>
+      <div class="values-grid">
+        <div class="value-item">
+          <span class="value-icon">🚀</span>
+          <div class="value-title" data-i18n="val1_t">CREATIVIDAD SIN LÍMITES</div>
+          <div class="value-desc" data-i18n="val1_d">Cada modelo nace de una idea loca. Aquí nunca decimos "eso no se puede imprimir".</div>
+        </div>
+        <div class="value-item">
+          <span class="value-icon">🤝</span>
+          <div class="value-title" data-i18n="val2_t">COMUNIDAD PRIMERO</div>
+          <div class="value-desc" data-i18n="val2_d">Nuestros usuarios nos inspiran cada semana. Sus ideas dan forma a los próximos modelos.</div>
+        </div>
+        <div class="value-item">
+          <span class="value-icon">💎</span>
+          <div class="value-title" data-i18n="val3_t">CALIDAD OBSESIVA</div>
+          <div class="value-desc" data-i18n="val3_d">No publicamos nada que no hayamos impreso y revisado tres veces. Punto.</div>
+        </div>
+      </div>
+    </div>
+    </div><!-- /about-inner -->
+  </div><!-- /about-box -->
+</section>
+
 <!-- =================== CATALOG =================== -->
 <div class="cat-layout" id="catalog">
   <aside class="sidebar">
@@ -115,8 +175,6 @@
         <div class="fi on" onclick="fcat(this,'all')"><span data-i18n="cat_all">Todos</span><span class="fi-c">48</span></div>
         <div class="fi" onclick="fcat(this,'figures')"><span data-i18n="cat_fig">Figuras</span><span class="fi-c">14</span></div>
         <div class="fi" onclick="fcat(this,'acc')"><span data-i18n="cat_acc">Accesorios</span><span class="fi-c">10</span></div>
-        <div class="fi" onclick="fcat(this,'scenery')"><span data-i18n="cat_sce">Escenografía</span><span class="fi-c">8</span></div>
-        <div class="fi" onclick="fcat(this,'deco')"><span data-i18n="cat_dec">Decoración</span><span class="fi-c">9</span></div>
         <div class="fi" onclick="fcat(this,'packs')"><span data-i18n="cat_pac">Packs</span><span class="fi-c">7</span></div>
       </div>
     </div>
@@ -129,7 +187,6 @@
       <div class="nb-title" data-i18n="fil_opts">⚙️ Opciones</div>
       <div class="tog-row"><span data-i18n="opt_new">Solo nuevos</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
       <div class="tog-row"><span data-i18n="opt_pop">Populares</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
-      <div class="tog-row"><span data-i18n="opt_sale">En oferta</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
       <div class="tog-row"><span data-i18n="opt_free">Gratuitos</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
     </div>
   </aside>
@@ -152,17 +209,6 @@
     </div>
   </main>
 </div>
-
-
-<!-- =================== FAQ =================== -->
-<section class="faq-section rev" id="faq">
-  <div class="faq-header">
-    <div class="faq-eyebrow" data-i18n="faq_eyebrow">✦ TENEMOS RESPUESTAS</div>
-    <h2 class="faq-title" data-i18n="faq_title">PREGUNTAS FRECUENTES ❓</h2>
-    <p class="faq-subtitle" data-i18n="faq_sub">todo lo que necesitas saber antes de comprar</p>
-  </div>
-  <div class="faq-grid" id="faq-grid"></div>
-</section>
 
 <!-- =================== INFO SECTIONS =================== -->
 <div class="info-sections" id="info-sections">
@@ -250,7 +296,7 @@
 <footer>
   <div class="foot-grid">
     <div>
-      <a href="#" class="foot-logo">⚡ VORTIX STUDIO</a>
+      <a href="#" class="foot-logo"><img src="./images/logo-claro.png" alt="VortiX Studio" class="logo-img-nav"/></a>
       <p class="foot-desc" data-i18n="foot_desc">El universo de los modelos 3D para mentes creativas. Diseña, imprime y da vida a tus ideas más épicas.</p>
       <div class="socials">
         <a class="soc" href="#">📸</a><a class="soc" href="#">🎵</a>
@@ -261,15 +307,12 @@
       <h4 data-i18n="foot_exp">Explorar</h4>
       <ul class="flinks">
         <li><a href="#" data-i18n="nav_catalog">Catálogo</a></li>
-        <li><a href="#" data-i18n="nav_new">Nuevos</a></li>
-        <li><a href="#" data-i18n="foot_feat">Destacados</a></li>
-        <li><a href="#" data-i18n="foot_free">Gratuitos</a></li>
+        <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
       </ul>
     </div>
     <div class="foot-col">
       <h4 data-i18n="foot_help">Ayuda</h4>
       <ul class="flinks">
-        <li><a href="#">FAQ</a></li>
         <li><a href="#info-sections" onclick="document.getElementById('info-sections').scrollIntoView({behavior:'smooth'});return false;" data-i18n="foot_cnt">Contacto</a></li>
         <li><a href="#info-sections" onclick="document.getElementById('info-sections').scrollIntoView({behavior:'smooth'});return false;" data-i18n="foot_how">Cómo imprimir</a></li>
       </ul>

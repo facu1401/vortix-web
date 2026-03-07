@@ -19,7 +19,19 @@ const T={
   foot_help:'Ayuda',foot_cnt:'Contacto',foot_how:'Cómo imprimir',foot_leg:'Legal',foot_priv:'Privacidad',foot_terms:'Términos',foot_coo:'Cookies',
   foot_rights:'Todos los derechos reservados.',foot_made:'Hecho con',foot_for:'para mentes creativas',
   srch_ph:'Buscar modelos...',btn_v:'Ver más',tf:'¡En favoritos! ❤️',tc:'¡Al carrito! 🛒',
-  faq_eyebrow:'✦ TENEMOS RESPUESTAS',faq_title:'PREGUNTAS FRECUENTES ❓',faq_sub:'todo lo que necesitas saber antes de comprar',cnt_title:'CONTACTO',cnt_name:'TU NOMBRE',cnt_name_ph:'Ej: Alex García',cnt_email:'CORREO',cnt_email_ph:'tu@correo.com',cnt_subject:'ASUNTO',cnt_sub1:'📦 Mi pedido',cnt_sub2:'🔧 Problema técnico',cnt_sub3:'💡 Sugerencia',cnt_sub4:'🤝 Colaboración',cnt_sub5:'❓ Otro',cnt_msg:'MENSAJE',cnt_msg_ph:'Cuéntanos todo...',cnt_send:'🚀 Enviar mensaje',cnt_ok:'¡Mensaje enviado! Te respondemos pronto 😊',print_title:'CÓMO IMPRIMIR',ps1_t:'DESCARGA EL ARCHIVO',ps1_d:'Tras la compra descarga el .STL o .OBJ desde Mis pedidos.',ps1_tip:'💡 Compatible con Cura, PrusaSlicer y Bambu Studio',ps2_t:'ABRE EL SLICER',ps2_d:'Importa el archivo y ajusta la escala si lo necesitas.',ps2_tip:'🎯 Recomendamos escala 100%',ps3_t:'CONFIGURA',ps3_d:'Relleno 15-20%, soportes donde indique el modelo, capa de 0.2mm.',ps3_tip:'🌡️ PLA a 200°C, cama a 60°C',ps4_t:'¡A IMPRIMIR!',ps4_d:'Las piezas grandes pueden tardar varias horas. ¡Vale la pena!',ps4_tip:'⚡ Comparte con #VortiXStudio',print_note:'Incluimos instrucciones con cada modelo. ¡Si tienes dudas contáctanos!'},
+  faq_eyebrow:'✦ TENEMOS RESPUESTAS',faq_title:'PREGUNTAS FRECUENTES ❓',faq_sub:'todo lo que necesitas saber antes de comprar',cnt_title:'CONTACTO',cnt_name:'TU NOMBRE',cnt_name_ph:'Ej: Alex García',cnt_email:'CORREO',cnt_email_ph:'tu@correo.com',cnt_subject:'ASUNTO',cnt_sub1:'📦 Mi pedido',cnt_sub2:'🔧 Problema técnico',cnt_sub3:'💡 Sugerencia',cnt_sub4:'🤝 Colaboración',cnt_sub5:'❓ Otro',cnt_msg:'MENSAJE',cnt_msg_ph:'Cuéntanos todo...',cnt_send:'🚀 Enviar mensaje',cnt_ok:'¡Mensaje enviado! Te respondemos pronto 😊',print_title:'CÓMO IMPRIMIR',ps1_t:'DESCARGA EL ARCHIVO',ps1_d:'Tras la compra descarga el .STL o .OBJ desde Mis pedidos.',ps1_tip:'💡 Compatible con Cura, PrusaSlicer y Bambu Studio',ps2_t:'ABRE EL SLICER',ps2_d:'Importa el archivo y ajusta la escala si lo necesitas.',ps2_tip:'🎯 Recomendamos escala 100%',ps3_t:'CONFIGURA',ps3_d:'Relleno 15-20%, soportes donde indique el modelo, capa de 0.2mm.',ps3_tip:'🌡️ PLA a 200°C, cama a 60°C',ps4_t:'¡A IMPRIMIR!',ps4_d:'Las piezas grandes pueden tardar varias horas. ¡Vale la pena!',ps4_tip:'⚡ Comparte con #VortiXStudio',print_note:'Incluimos instrucciones con cada modelo. ¡Si tienes dudas contáctanos!',
+  /* ABOUT */
+  ab_eyebrow:'✦ EL CREADOR',ab_title:'SOBRE NOSOTROS 🎨',ab_sub:'un apasionado del 3D, los colores y el café detrás de todo esto',
+  ab_mission_tape:'🎯 MI MISIÓN',
+  ab_mission_q:'"Quiero que cada persona pueda tener en sus manos el personaje que lleva en la imaginación. El 3D no es solo tecnología — es magia tangible."',
+  ab_mission_auth:'— Facundo, VortiX Studio ⚡',
+  t1_name:'FACUNDO',t1_role:'Fundador & Creador',t1_desc:'Diseñador, impresor y el alma detrás de cada modelo. Vive rodeado de filamento PLA y música. Convierte ideas en objetos reales.',t1_badge:'⚡ El único, el inigualable',
+  ab_val_tape:'✨ LO QUE ME MUEVE',
+  val1_t:'CREATIVIDAD SIN LÍMITES',val1_d:'Cada modelo nace de una idea loca. Aquí nunca digo "eso no se puede imprimir".',
+  val2_t:'COMUNIDAD PRIMERO',val2_d:'Mis usuarios me inspiran cada semana. Sus ideas dan forma a los próximos modelos.',
+  val3_t:'CALIDAD OBSESIVA',val3_d:'No publico nada que no haya impreso y revisado tres veces. Punto.',
+  as1:'Modelos 3D',as2:'Creador',as3:'Descargas',as4:'Rating medio',
+  ab_tc1:'⚡ EL CREADOR',ab_tc2:'desde 2023 🚀'},
 
   en:{nav_home:'Home',nav_catalog:'Catalog',nav_cat:'Categories',nav_new:'New',nav_about:'About Us',
   hero_chip:'The creative universe awaits! 🚀',hero_l1:'WELCOME TO',hero_l2:'VORTIX STUDIO',hero_l3:'where ideas take shape',
@@ -40,7 +52,19 @@ const T={
   foot_help:'Help',foot_cnt:'Contact',foot_how:'How to print',foot_leg:'Legal',foot_priv:'Privacy',foot_terms:'Terms',foot_coo:'Cookies',
   foot_rights:'All rights reserved.',foot_made:'Made with',foot_for:'for creative minds',
   srch_ph:'Search models...',btn_v:'View more',tf:'Added to favorites! ❤️',tc:'Added to cart! 🛒',
-  faq_eyebrow:'✦ GOT QUESTIONS',faq_title:'FAQ ❓',faq_sub:'everything you need to know before buying',cnt_title:'CONTACT',cnt_name:'YOUR NAME',cnt_name_ph:'E.g. Alex Garcia',cnt_email:'EMAIL',cnt_email_ph:'you@email.com',cnt_subject:'SUBJECT',cnt_sub1:'📦 My order',cnt_sub2:'🔧 Technical issue',cnt_sub3:'💡 Suggestion',cnt_sub4:'🤝 Collaboration',cnt_sub5:'❓ Other',cnt_msg:'MESSAGE',cnt_msg_ph:'Tell us everything...',cnt_send:'🚀 Send message',cnt_ok:'Message sent! We\'ll reply soon 😊',print_title:'HOW TO PRINT',ps1_t:'DOWNLOAD THE FILE',ps1_d:'After purchase, download the .STL or .OBJ from My Orders.',ps1_tip:'💡 Compatible with Cura, PrusaSlicer and Bambu Studio',ps2_t:'OPEN YOUR SLICER',ps2_d:'Import the file and adjust scale if needed.',ps2_tip:'🎯 We recommend 100% scale',ps3_t:'CONFIGURE PRINT',ps3_d:'15-20% infill, supports where needed, 0.2mm layer height.',ps3_tip:'🌡️ PLA at 200°C, bed at 60°C',ps4_t:'PRINT IT!',ps4_d:'Large pieces may take several hours. Worth it!',ps4_tip:'⚡ Share with #VortiXStudio',print_note:'We include specific instructions with each model. If in doubt, contact us!'},
+  faq_eyebrow:'✦ GOT QUESTIONS',faq_title:'FAQ ❓',faq_sub:'everything you need to know before buying',cnt_title:'CONTACT',cnt_name:'YOUR NAME',cnt_name_ph:'E.g. Alex Garcia',cnt_email:'EMAIL',cnt_email_ph:'you@email.com',cnt_subject:'SUBJECT',cnt_sub1:'📦 My order',cnt_sub2:'🔧 Technical issue',cnt_sub3:'💡 Suggestion',cnt_sub4:'🤝 Collaboration',cnt_sub5:'❓ Other',cnt_msg:'MESSAGE',cnt_msg_ph:'Tell us everything...',cnt_send:'🚀 Send message',cnt_ok:'Message sent! We\'ll reply soon 😊',print_title:'HOW TO PRINT',ps1_t:'DOWNLOAD THE FILE',ps1_d:'After purchase, download the .STL or .OBJ from My Orders.',ps1_tip:'💡 Compatible with Cura, PrusaSlicer and Bambu Studio',ps2_t:'OPEN YOUR SLICER',ps2_d:'Import the file and adjust scale if needed.',ps2_tip:'🎯 We recommend 100% scale',ps3_t:'CONFIGURE PRINT',ps3_d:'15-20% infill, supports where needed, 0.2mm layer height.',ps3_tip:'🌡️ PLA at 200°C, bed at 60°C',ps4_t:'PRINT IT!',ps4_d:'Large pieces may take several hours. Worth it!',ps4_tip:'⚡ Share with #VortiXStudio',print_note:'We include specific instructions with each model. If in doubt, contact us!',
+  /* ABOUT */
+  ab_eyebrow:'✦ THE CREATOR',ab_title:'ABOUT US 🎨',ab_sub:'one passionate 3D maker behind all of this',
+  ab_mission_tape:'🎯 MY MISSION',
+  ab_mission_q:'"I want every person to hold in their hands the character they carry in their imagination. 3D isn\'t just technology — it\'s tangible magic."',
+  ab_mission_auth:'— Facundo, VortiX Studio ⚡',
+  t1_name:'FACUNDO',t1_role:'Founder & Creator',t1_desc:'Designer, printer and the soul behind every model. Lives surrounded by PLA filament and music. Turns ideas into real objects.',t1_badge:'⚡ One of a kind',
+  ab_val_tape:'✨ WHAT DRIVES ME',
+  val1_t:'LIMITLESS CREATIVITY',val1_d:'Every model is born from a crazy idea. I never say "that can\'t be printed" here.',
+  val2_t:'COMMUNITY FIRST',val2_d:'My users inspire me every week. Their ideas shape the next models.',
+  val3_t:'OBSESSIVE QUALITY',val3_d:'I don\'t publish anything I haven\'t printed and reviewed three times. Period.',
+  as1:'3D Models',as2:'Creator',as3:'Downloads',as4:'Avg rating',
+  ab_tc1:'⚡ THE CREATOR',ab_tc2:'since 2023 🚀'},
 
   pt:{nav_home:'Início',nav_catalog:'Catálogo',nav_cat:'Categorias',nav_new:'Novos',nav_about:'Sobre Nós',
   hero_chip:'O universo criativo te espera! 🚀',hero_l1:'BEM-VINDO AO',hero_l2:'VORTIX STUDIO',hero_l3:'onde as ideias ganham forma',
@@ -61,7 +85,19 @@ const T={
   foot_help:'Ajuda',foot_cnt:'Contato',foot_how:'Como imprimir',foot_leg:'Legal',foot_priv:'Privacidade',foot_terms:'Termos',foot_coo:'Cookies',
   foot_rights:'Todos os direitos reservados.',foot_made:'Feito com',foot_for:'para mentes criativas',
   srch_ph:'Buscar modelos...',btn_v:'Ver mais',tf:'Nos favoritos! ❤️',tc:'No carrinho! 🛒',
-  faq_eyebrow:'✦ TEMOS RESPOSTAS',faq_title:'PERGUNTAS FREQUENTES ❓',faq_sub:'tudo que você precisa saber antes de comprar',cnt_title:'CONTATO',cnt_name:'SEU NOME',cnt_name_ph:'Ex: Alex Garcia',cnt_email:'E-MAIL',cnt_email_ph:'voce@email.com',cnt_subject:'ASSUNTO',cnt_sub1:'📦 Meu pedido',cnt_sub2:'🔧 Problema técnico',cnt_sub3:'💡 Sugestão',cnt_sub4:'🤝 Colaboração',cnt_sub5:'❓ Outro',cnt_msg:'MENSAGEM',cnt_msg_ph:'Conte tudo...',cnt_send:'🚀 Enviar mensagem',cnt_ok:'Mensagem enviada! Respondemos em breve 😊',print_title:'COMO IMPRIMIR',ps1_t:'BAIXE O ARQUIVO',ps1_d:'Após a compra, baixe o .STL ou .OBJ em Meus Pedidos.',ps1_tip:'💡 Compatível com Cura, PrusaSlicer e Bambu Studio',ps2_t:'ABRA O SLICER',ps2_d:'Importe o arquivo e ajuste a escala se necessário.',ps2_tip:'🎯 Recomendamos escala 100%',ps3_t:'CONFIGURE',ps3_d:'Preenchimento 15-20%, suportes onde indicado, camada de 0.2mm.',ps3_tip:'🌡️ PLA a 200°C, mesa a 60°C',ps4_t:'IMPRIMA!',ps4_d:'Peças grandes podem demorar várias horas. Vale a pena!',ps4_tip:'⚡ Compartilhe com #VortiXStudio',print_note:'Incluímos instruções com cada modelo. Em caso de dúvidas, fale conosco!'}
+  faq_eyebrow:'✦ TEMOS RESPOSTAS',faq_title:'PERGUNTAS FREQUENTES ❓',faq_sub:'tudo que você precisa saber antes de comprar',cnt_title:'CONTATO',cnt_name:'SEU NOME',cnt_name_ph:'Ex: Alex Garcia',cnt_email:'E-MAIL',cnt_email_ph:'voce@email.com',cnt_subject:'ASSUNTO',cnt_sub1:'📦 Meu pedido',cnt_sub2:'🔧 Problema técnico',cnt_sub3:'💡 Sugestão',cnt_sub4:'🤝 Colaboração',cnt_sub5:'❓ Outro',cnt_msg:'MENSAGEM',cnt_msg_ph:'Conte tudo...',cnt_send:'🚀 Enviar mensagem',cnt_ok:'Mensagem enviada! Respondemos em breve 😊',print_title:'COMO IMPRIMIR',ps1_t:'BAIXE O ARQUIVO',ps1_d:'Após a compra, baixe o .STL ou .OBJ em Meus Pedidos.',ps1_tip:'💡 Compatível com Cura, PrusaSlicer e Bambu Studio',ps2_t:'ABRA O SLICER',ps2_d:'Importe o arquivo e ajuste a escala se necessário.',ps2_tip:'🎯 Recomendamos escala 100%',ps3_t:'CONFIGURE',ps3_d:'Preenchimento 15-20%, suportes onde indicado, camada de 0.2mm.',ps3_tip:'🌡️ PLA a 200°C, mesa a 60°C',ps4_t:'IMPRIMA!',ps4_d:'Peças grandes podem demorar várias horas. Vale a pena!',ps4_tip:'⚡ Compartilhe com #VortiXStudio',print_note:'Incluímos instruções com cada modelo. Em caso de dúvidas, fale conosco!',
+  /* ABOUT */
+  ab_eyebrow:'✦ O CRIADOR',ab_title:'SOBRE NÓS 🎨',ab_sub:'um apaixonado por 3D, cores e café por trás de tudo isso',
+  ab_mission_tape:'🎯 MINHA MISSÃO',
+  ab_mission_q:'"Quero que cada pessoa possa ter nas mãos o personagem que carrega na imaginação. O 3D não é só tecnologia — é magia tangível."',
+  ab_mission_auth:'— Facundo, VortiX Studio ⚡',
+  t1_name:'FACUNDO',t1_role:'Fundador & Criador',t1_desc:'Designer, impressor e a alma por trás de cada modelo. Vive rodeado de filamento PLA e música. Transforma ideias em objetos reais.',t1_badge:'⚡ Único, inigualável',
+  ab_val_tape:'✨ O QUE ME MOVE',
+  val1_t:'CRIATIVIDADE SEM LIMITES',val1_d:'Cada modelo nasce de uma ideia maluca. Nunca digo "isso não pode ser impresso".',
+  val2_t:'COMUNIDADE PRIMEIRO',val2_d:'Meus usuários me inspiram toda semana. Suas ideias moldam os próximos modelos.',
+  val3_t:'QUALIDADE OBSESSIVA',val3_d:'Não publico nada que não tenha impresso e revisado três vezes. Ponto.',
+  as1:'Modelos 3D',as2:'Criador',as3:'Downloads',as4:'Rating médio',
+  ab_tc1:'⚡ O CRIADOR',ab_tc2:'desde 2023 🚀'}
 };
 
 let lang='es';
@@ -494,64 +530,6 @@ function sendContact(btn){
     document.getElementById('cform-ok').classList.remove('show');
     ['cf-name','cf-email','cf-msg'].forEach(id=>document.getElementById(id).value='');
   }, 4000);
-}
-
-
-/* ====== FAQ ====== */
-const FAQS = {
-  es: [
-    { icon:'📦', color:'#00E5FF', q:'¿Cómo descargo mi modelo después de comprar?', a:'Una vez completado el pago, el archivo aparece automáticamente en tu perfil bajo <strong>"Mis pedidos"</strong>. Recibirás además un correo con el enlace de descarga. ¡Tienes acceso ilimitado para siempre!' },
-    { icon:'🖨️', color:'#39FF14', q:'¿Qué impresora necesito para imprimir los modelos?', a:'Nuestros modelos son compatibles con <strong>cualquier impresora FDM</strong> del mercado (Bambu Lab, Prusa, Creality, Ender...). También funcionan con resina SLA/MSLA para más detalle.' },
-    { icon:'💳', color:'#FFE500', q:'¿Qué métodos de pago aceptáis?', a:'Aceptamos <strong>tarjeta de crédito/débito</strong> (Visa, Mastercard, Amex), <strong>PayPal</strong>, <strong>Google Pay</strong> y <strong>Apple Pay</strong>. Todos los pagos se procesan con cifrado SSL.' },
-    { icon:'🔄', color:'#FF6B35', q:'¿Puedo pedir un reembolso?', a:'Sí, tienes <strong>14 días</strong> desde la compra para solicitar reembolso si el archivo tiene defectos técnicos. Una vez descargado el archivo, no aplican reembolsos por cambio de opinión.' },
-    { icon:'📐', color:'#7C4DFF', q:'¿En qué formato vienen los archivos?', a:'Todos los modelos se entregan en <strong>.STL</strong> (listo para imprimir) y muchos también incluyen <strong>.OBJ</strong> y el archivo fuente para modificaciones. Se indica en cada producto.' },
-    { icon:'🎨', color:'#00E5FF', q:'¿Puedo modificar los modelos para uso personal?', a:'¡Por supuesto! Puedes modificar, escalar y personalizar los modelos para tu uso personal. <strong>No está permitida</strong> la reventa de los archivos originales o modificados sin autorización expresa.' },
-    { icon:'🚀', color:'#39FF14', q:'¿Con qué frecuencia añadís modelos nuevos?', a:'Publicamos <strong>nuevos modelos cada semana</strong>. Sigue nuestra cuenta en Instagram o activa las notificaciones para ser el primero en enterarte de los lanzamientos.' },
-    { icon:'🤝', color:'#FFE500', q:'¿Cómo puedo vender mis propios modelos en VortiX?', a:'¡Nos encanta colaborar con creadores! Escríbenos a <strong>creators@vortixstudio.com</strong> con ejemplos de tu trabajo y te contamos cómo unirte a nuestra comunidad de diseñadores.' },
-  ],
-  en: [
-    { icon:'📦', color:'#00E5FF', q:'How do I download my model after purchasing?', a:'Once payment is complete, the file appears automatically in your profile under <strong>"My Orders"</strong>. You\'ll also receive an email with the download link. You have unlimited lifetime access!' },
-    { icon:'🖨️', color:'#39FF14', q:'What printer do I need to print the models?', a:'Our models are compatible with <strong>any FDM printer</strong> on the market (Bambu Lab, Prusa, Creality, Ender...). They also work with SLA/MSLA resin printers for more detail.' },
-    { icon:'💳', color:'#FFE500', q:'What payment methods do you accept?', a:'We accept <strong>credit/debit cards</strong> (Visa, Mastercard, Amex), <strong>PayPal</strong>, <strong>Google Pay</strong> and <strong>Apple Pay</strong>. All payments are SSL encrypted.' },
-    { icon:'🔄', color:'#FF6B35', q:'Can I get a refund?', a:'Yes, you have <strong>14 days</strong> from purchase to request a refund if the file has technical defects. Once the file has been downloaded, refunds for change of mind do not apply.' },
-    { icon:'📐', color:'#7C4DFF', q:'What format are the files in?', a:'All models are delivered in <strong>.STL</strong> (print-ready) and many also include <strong>.OBJ</strong> and source files for modifications. It\'s indicated on each product page.' },
-    { icon:'🎨', color:'#00E5FF', q:'Can I modify the models for personal use?', a:'Absolutely! You can modify, scale and customize the models for personal use. <strong>Reselling</strong> original or modified files without explicit authorization is <strong>not permitted</strong>.' },
-    { icon:'🚀', color:'#39FF14', q:'How often do you add new models?', a:'We publish <strong>new models every week</strong>. Follow us on Instagram or enable notifications to be the first to know about new releases.' },
-    { icon:'🤝', color:'#FFE500', q:'How can I sell my own models on VortiX?', a:'We love collaborating with creators! Write to <strong>creators@vortixstudio.com</strong> with examples of your work and we\'ll tell you how to join our designer community.' },
-  ],
-  pt: [
-    { icon:'📦', color:'#00E5FF', q:'Como baixo meu modelo após a compra?', a:'Após o pagamento, o arquivo aparece automaticamente no seu perfil em <strong>"Meus Pedidos"</strong>. Você também receberá um e-mail com o link de download. Acesso ilimitado para sempre!' },
-    { icon:'🖨️', color:'#39FF14', q:'Qual impressora preciso para imprimir os modelos?', a:'Nossos modelos são compatíveis com <strong>qualquer impressora FDM</strong> do mercado (Bambu Lab, Prusa, Creality, Ender...). Também funcionam com resina SLA/MSLA para mais detalhes.' },
-    { icon:'💳', color:'#FFE500', q:'Quais métodos de pagamento vocês aceitam?', a:'Aceitamos <strong>cartão de crédito/débito</strong> (Visa, Mastercard, Amex), <strong>PayPal</strong>, <strong>Google Pay</strong> e <strong>Apple Pay</strong>. Todos os pagamentos são criptografados com SSL.' },
-    { icon:'🔄', color:'#FF6B35', q:'Posso solicitar um reembolso?', a:'Sim, você tem <strong>14 dias</strong> a partir da compra para solicitar reembolso se o arquivo tiver defeitos técnicos. Após o download, reembolsos por mudança de opinião não se aplicam.' },
-    { icon:'📐', color:'#7C4DFF', q:'Em que formato vêm os arquivos?', a:'Todos os modelos são entregues em <strong>.STL</strong> (pronto para impressão) e muitos também incluem <strong>.OBJ</strong> e arquivos fonte para modificações.' },
-    { icon:'🎨', color:'#00E5FF', q:'Posso modificar os modelos para uso pessoal?', a:'Com certeza! Você pode modificar, escalar e personalizar os modelos para uso pessoal. A <strong>revenda</strong> dos arquivos sem autorização expressa <strong>não é permitida</strong>.' },
-    { icon:'🚀', color:'#39FF14', q:'Com que frequência vocês adicionam novos modelos?', a:'Publicamos <strong>novos modelos toda semana</strong>. Siga-nos no Instagram ou ative as notificações para ser o primeiro a saber dos lançamentos.' },
-    { icon:'🤝', color:'#FFE500', q:'Como posso vender meus próprios modelos na VortiX?', a:'Adoramos colaborar com criadores! Escreva para <strong>creators@vortixstudio.com</strong> com exemplos do seu trabalho e te contamos como se juntar à nossa comunidade.' },
-  ]
-};
-
-function renderFAQ(){
-  const grid = document.getElementById('faq-grid');
-  if(!grid) return;
-  grid.innerHTML = '';
-  FAQS[lang].forEach((f, i) => {
-    const el = document.createElement('div');
-    el.className = 'faq-item rev';
-    el.style.cssText = `--fi-color:${f.color};transition-delay:${i*0.04}s`;
-    el.innerHTML = `
-      <div class="faq-q" onclick="toggleFAQ(this.parentElement)">
-        <span class="faq-q-icon">${f.icon}</span>
-        <span class="faq-q-text">${f.q}</span>
-        <span class="faq-arrow">▼</span>
-      </div>
-      <div class="faq-a"><div class="faq-a-inner">${f.a}</div></div>`;
-    grid.appendChild(el);
-    requestAnimationFrame(()=>requestAnimationFrame(()=>{
-      el.classList.add('vis');
-      obs.observe(el);
-    }));
-  });
 }
 
 function toggleFAQ(item){
