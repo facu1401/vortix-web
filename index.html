@@ -3,318 +3,361 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>VortiX Studio ⚡ modelos 3D</title>
+<title>VortiX Tech Makers - modelos 3D</title>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Caveat:wght@400;600;700&family=Permanent+Marker&family=Patrick+Hand&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./modal.css">
+<link rel="stylesheet" href="./media-queries.css">
+
+<style>
+/* ── LOGO: letras blancas ── */
+.logo-main {
+  color: #ffffff !important;
+  text-shadow: 3px 3px 0 var(--purple), 5px 5px 0 rgba(0,0,0,.5) !important;
+}
+.logo-sub { color: #fff9b0 !important; }
+
+/* ── SLIDER ── */
+.slider-wrap {
+  max-width: 1440px;
+  margin: 0 auto 70px;
+  padding: 0 20px;
+}
+.slider-header { text-align: center; margin-bottom: 28px; }
+.slider-title {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  letter-spacing: 3px;
+  color: var(--paper);
+  text-shadow: 3px 3px 0 var(--purple);
+}
+[data-theme="light"] .slider-title { color: #1a1a2e; }
+.slider-subtitle {
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  color: rgba(255,254,242,.5);
+  margin-top: 4px;
+}
+[data-theme="light"] .slider-subtitle { color: rgba(26,26,46,.5); }
+.slider-outer {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid var(--cyan);
+  border-radius: 24px;
+  box-shadow: 8px 8px 0 var(--purple);
+  background: rgba(255,254,242,.03);
+}
+[data-theme="light"] .slider-outer { background: rgba(255,255,255,.7); }
+.slider-track {
+  display: flex;
+  transition: transform .45s cubic-bezier(.34,1.2,.64,1);
+  will-change: transform;
+}
+.slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  padding: 44px 52px;
+}
+.slide-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-img img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  filter: drop-shadow(0 10px 32px rgba(0,229,255,.35));
+  transform: rotate(-3deg);
+  transition: transform .4s;
+}
+.slide:hover .slide-img img { transform: rotate(0deg) scale(1.05); }
+.slide-info { padding-left: 30px; }
+.slide-cat {
+  font-family: 'Permanent Marker', cursive;
+  font-size: .88rem;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+.slide-name {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: 2px;
+  color: var(--paper);
+  text-shadow: 3px 3px 0 var(--purple);
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+[data-theme="light"] .slide-name { color: #1a1a2e; }
+.slide-desc {
+  font-family: 'Caveat', cursive;
+  font-size: 1.2rem;
+  color: rgba(255,254,242,.68);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+[data-theme="light"] .slide-desc { color: rgba(26,26,46,.65); }
+.slide-price {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2.2rem;
+  color: var(--yellow);
+  display: inline-block;
+  transform: rotate(-2deg);
+  margin-bottom: 22px;
+}
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px 0 20px;
+}
+.sl-btn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 3px solid var(--cyan);
+  background: rgba(0,229,255,.1);
+  color: var(--cyan);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .2s;
+  box-shadow: 3px 3px 0 var(--cyan);
+}
+.sl-btn:hover { background: rgba(0,229,255,.25); transform: translate(-2px,-2px); box-shadow: 5px 5px 0 var(--cyan); }
+.sl-btn:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 var(--cyan); }
+.sl-dots { display: flex; gap: 8px; }
+.sl-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--cyan);
+  background: transparent;
+  cursor: pointer;
+  transition: all .2s;
+}
+.sl-dot.on { background: var(--cyan); box-shadow: 0 0 8px var(--cyan); }
+</style>
 </head>
 <body>
 
-
-
 <!-- TOAST -->
-<div class="toast" id="toast"><span id="ti">✨</span><span id="tm">¡Añadido!</span></div>
+<div class="toast" id="toast"><span id="tm">Añadido</span></div>
 
-<!-- =================== HEADER =================== -->
+<!-- HEADER -->
 <header>
   <div class="hdr">
-
-<a href="#" class="logo">
-  <img src="./images/logo-claro.png" alt="VortiX Studio" class="logo-img-nav"/>
-</a>
+    <a href="#" class="logo">
+      <img src="./images/logo-claro.png" alt="VortiX Tech Makers" class="logo-img-nav"/>
+    </a>
     <nav>
-      <a href="#" class="active" data-i18n="nav_home" data-sticker="🏠">Inicio</a>
+      <a href="#" class="active" data-i18n="nav_home">Inicio</a>
       <a href="#catalog" data-i18n="nav_catalog">Catálogo</a>
       <a href="#about" data-i18n="nav_about">Sobre Mí</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-left:auto;">
-      <div class="srch">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,254,242,.4)" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="text" data-i18n-ph="srch_ph" placeholder="Buscar modelos..."/>
-      </div>
       <div style="display:flex;gap:5px;">
-        <button class="lang-btn active" onclick="setLang('es',this)">🇪🇸 ES</button>
-        <button class="lang-btn" onclick="setLang('en',this)">🇺🇸 EN</button>
-        <button class="lang-btn" onclick="setLang('pt',this)">🇧🇷 PT</button>
+        <button class="lang-btn active" onclick="setLang('es',this)">ES</button>
+        <button class="lang-btn" onclick="setLang('en',this)">EN</button>
+        <button class="lang-btn" onclick="setLang('pt',this)">PT</button>
       </div>
       <button class="theme-btn" id="tbtn" onclick="toggleTheme()">🌙</button>
     </div>
   </div>
 </header>
 
-<!-- =================== HERO =================== -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <!-- hand-drawn BG doodles -->
   <div class="doodle-bg">
     <svg style="position:absolute;top:-80px;right:-120px;opacity:.08;" width="600" height="600" viewBox="0 0 600 600"><circle cx="300" cy="300" r="280" fill="none" stroke="#00E5FF" stroke-width="3" stroke-dasharray="20 10"/><circle cx="300" cy="300" r="190" fill="none" stroke="#7C4DFF" stroke-width="2" stroke-dasharray="8 16"/></svg>
     <svg style="position:absolute;bottom:-60px;left:-50px;opacity:.07;" width="400" height="400" viewBox="0 0 400 400"><circle cx="200" cy="200" r="180" fill="none" stroke="#FF6B35" stroke-width="3" stroke-dasharray="15 8"/></svg>
     <svg style="position:absolute;top:180px;left:30px;opacity:.18;" width="200" height="60" viewBox="0 0 200 60"><path d="M5 30 Q30 5 60 30 Q90 55 120 30 Q150 5 195 30" fill="none" stroke="#FFE500" stroke-width="3"/></svg>
     <svg style="position:absolute;bottom:200px;right:80px;opacity:.18;" width="120" height="40" viewBox="0 0 120 40"><path d="M5 20 Q20 5 40 20 Q60 35 80 20 Q100 5 115 20" fill="none" stroke="#39FF14" stroke-width="3"/></svg>
-    <svg style="position:absolute;top:220px;left:200px;opacity:.5;" width="28" height="28" viewBox="0 0 28 28"><path d="M14 2 L16 9 L23 9 L17 14 L19 22 L14 17 L9 22 L11 14 L5 9 L12 9Z" fill="#FFE500"/></svg>
-    <svg style="position:absolute;top:370px;right:220px;opacity:.4;" width="20" height="20" viewBox="0 0 20 20"><path d="M10 1 L11.8 7 L18 7 L13 11 L15 18 L10 14 L5 18 L7 11 L2 7 L8.2 7Z" fill="#FF6B35"/></svg>
-    <svg style="position:absolute;top:300px;left:120px;opacity:.28;" width="24" height="24" viewBox="0 0 24 24"><line x1="0" y1="0" x2="24" y2="24" stroke="#00E5FF" stroke-width="3"/><line x1="24" y1="0" x2="0" y2="24" stroke="#00E5FF" stroke-width="3"/></svg>
   </div>
-
   <div class="hero-inner">
-    <!-- TEXT -->
     <div class="hero-text rev">
-      <div class="doodle-chip" data-i18n="hero_chip">¡El universo creativo te espera! 🚀</div>
+      <div class="doodle-chip" data-i18n="hero_chip">El universo creativo te espera</div>
       <h1 class="hero-h1">
         <span class="h1-l1" data-i18n="hero_l1">BIENVENIDO A</span><br/>
-        <span class="h1-l2" data-i18n="hero_l2">VORTIX STUDIO</span><br/>
-        <br>
+        <span class="h1-l2" data-i18n="hero_l2">VORTIX TECH MAKERS</span><br/><br>
         <span class="h1-l1" style="font-size:.6em;color:rgba(255,254,242,.8);" data-i18n="hero_l3">donde las ideas toman forma</span>
       </h1>
-      <p class="hero-tagline" data-i18n="hero_desc">Modelos 3D épicos, figuras<br/>increíbles &amp; accesorios únicos.<br/>¡Diseñados para ti! 🎮</p>
+      <p class="hero-tagline" data-i18n="hero_desc">Modelos 3D épicos, figuras increíbles y accesorios únicos. Diseñados para ti.</p>
       <div class="hero-btns">
-        <a href="#catalog" class="btn-c cyan" data-i18n="hero_cta">🚀 Explorar catálogo</a>
-        <a href="#categories" class="btn-c yellow" data-i18n="hero_cta2">✨ Categorías</a>
+        <a href="#catalog" class="btn-c cyan" data-i18n="hero_cta">Explorar catálogo</a>
+        <a href="#about" class="btn-c yellow" data-i18n="hero_cta2">Sobre Mí</a>
       </div>
     </div>
-    <!-- VISUAL -->
     <div class="hero-visual rev" style="transition-delay:.15s">
       <div style="position:relative;display:inline-block;">
         <div class="hmc">
-          <span class="hmc-emoji">🐉</span>
-          <div class="hmc-name" data-i18n="feat_cn">DRAGÓN ÉPICO</div>
-          <div class="hmc-price">$19.99</div>
+          <img src="./images/dragon-epico.png" alt="Dragon Azul" style="width:100%;height:50%;object-fit:cover;border-radius:inherit;display:block;"/>
+          <div class="hmc-name" data-i18n="feat_cn">DRAGON AZUL</div>
+      
         </div>
-        <span class="fst" style="top:-20px;left:-30px;--r:-15deg;animation-delay:0s">⭐</span>
-        <span class="fst" style="top:10px;right:-26px;--r:20deg;animation-delay:-.8s">🔥</span>
-        <span class="fst" style="bottom:-15px;left:10px;--r:5deg;animation-delay:-1.6s">💎</span>
-        <span class="fst" style="bottom:20px;right:-20px;--r:-10deg;animation-delay:-2.4s">⚡</span>
         <div class="tape" style="position:absolute;top:-18px;left:50%;transform:translateX(-50%) rotate(-2deg);" data-i18n="hero_tape">NUEVO</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SLIDER DE PRODUCTOS (reemplaza Pack Dragon Ultra Collector) -->
+<div class="slider-wrap rev" id="featured">
+  <div class="slider-header">
+    <h2 class="slider-title" data-i18n="slider_title">PRODUCTOS DESTACADOS</h2>
+    <p class="slider-subtitle" data-i18n="slider_sub">Desliza para ver nuestra colección</p>
+  </div>
+  <div class="slider-outer">
+    <div class="slider-track" id="sliderTrack">
 
+      <div class="slide">
+        <div class="slide-img"><img src="./images/dragon-epico.png" alt="Dragon Azul"/></div>
+        <div class="slide-info">
+          <div class="slide-cat">Figuras</div>
+          <div class="slide-name">DRAGÓN AZUL</div>
+          <p class="slide-desc">Figura imponente con acabado brillante y detalles en relieve. Ideal para coleccionistas.</p>
+          <div class="slide-price">4,00 €</div><br/>
+          <a href="#catalog" class="btn-c cyan">Ver en catálogo</a>
+        </div>
+      </div>
 
-<!-- =================== FEATURED BANNER =================== -->
-<div class="feat-wrap rev" id="featured">
-  <div class="feat-inner">
-    <div>
-      <div class="feat-chip" data-i18n="feat_chip">🔥 DESTACADO DEL MES</div>
-      <h2 class="feat-h2"><span data-i18n="feat_t1">Pack Dragon</span> <span data-i18n="feat_t2">Ultra Collector</span></h2>
-      <p class="feat-p" data-i18n="feat_desc">12 piezas únicas, articulaciones perfectas, detalles increíbles. ¡Solo 50 unidades disponibles!</p>
-      <a href="#" class="btn-c cyan" data-i18n="feat_btn">🐉 ¡Lo quiero ya!</a>
+      <div class="slide">
+        <div class="slide-img"><img src="./images/robot-accesorios.png" alt="Robot Articulado"/></div>
+        <div class="slide-info">
+          <div class="slide-cat">Figuras</div>
+          <div class="slide-name">ROBOT ARTICULADO</div>
+          <p class="slide-desc">Articulaciones funcionales en todo el cuerpo. El más solicitado de la colección.</p>
+          <div class="slide-price">5,00 €</div><br/>
+          <a href="#catalog" class="btn-c cyan">Ver en catálogo</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-img"><img src="./images/camaleon.png" alt="Camaleón"/></div>
+        <div class="slide-info">
+          <div class="slide-cat">Figuras</div>
+          <div class="slide-name">CAMALEÓN</div>
+          <p class="slide-desc">Cuerpo segmentado completamente flexible con textura de escamas detallada.</p>
+          <div class="slide-price">3,50 €</div><br/>
+          <a href="#catalog" class="btn-c cyan">Ver en catálogo</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="slide-img"><img src="./images/rana-cosmica3.png" alt="Ranas"/></div>
+        <div class="slide-info">
+          <div class="slide-cat">Figuras</div>
+          <div class="slide-name">RANAS</div>
+          <p class="slide-desc">Patas y brazos completamente móviles. Disponibles en colores vivos.</p>
+          <div class="slide-price">3,50 €</div><br/>
+          <a href="#catalog" class="btn-c cyan">Ver en catálogo</a>
+        </div>
+      </div>
+
     </div>
-    <div class="feat-visual"><span class="feat-emoji">🐲</span></div>
-    <div class="tc tc1" data-i18n="feat_tc1">EDICIÓN LIMITADA ⚡</div>
-    <div class="tc tc2" data-i18n="feat_tc2">solo 50 uds</div>
+    <div class="slider-controls">
+      <button class="sl-btn" onclick="sliderMove(-1)">&#8249;</button>
+      <div class="sl-dots" id="slDots"></div>
+      <button class="sl-btn" onclick="sliderMove(1)">&#8250;</button>
+    </div>
   </div>
 </div>
 
-<!-- =================== SOBRE NOSOTROS =================== -->
-<section class="about-section" id="about">
-  <div class="about-box rev">
-
-    <!-- cintas decorativas -->
-    <div class="tc tc1" data-i18n="ab_tc1">⚡ EL CREADOR</div>
-    <div class="tc tc2" data-i18n="ab_tc2">desde 2023 🚀</div>
-
-    <div class="about-inner">
-
-    <!-- HEADER -->
-    <div class="about-header rev">
-      <div class="about-eyebrow" data-i18n="ab_eyebrow">✦ EL CREADOR</div>
-      <h2 class="about-title" data-i18n="ab_title">SOBRE MÍ 🎨</h2>
-      <p class="about-subtitle" data-i18n="ab_sub">un apasionado del 3D, los colores y la creatividad detrás de todo esto</p>
-    </div>
-
-    <!-- MISIÓN -->
-    <div class="about-mission rev" style="transition-delay:.08s">
-      <div class="mission-tape" data-i18n="ab_mission_tape">🎯 MI MISIÓN</div>
-      <blockquote class="mission-quote" data-i18n="ab_mission_q">"Quiero que cada persona pueda tener en sus manos el personaje que lleva en la imaginación. El 3D no es solo tecnología — es magia tangible."</blockquote>
-      <div class="mission-author" data-i18n="ab_mission_auth">— Facundo, VortiX Studio ⚡</div>
-    </div>
-
-    <!-- CREATOR CARD (centrada) -->
-    <div style="display:flex;justify-content:center;">
-      <div class="team-card rev" style="--tc-color:#00E5FF;--tc-rot:0deg;max-width:320px;width:100%;transition-delay:.1s">
-        <div class="team-card-pin">📌</div>
-        <div class="team-avatar">🧑‍💻</div>
-        <div class="team-name" data-i18n="t1_name">FACUNDO</div>
-        <div class="team-role" data-i18n="t1_role">Fundador & Creador</div>
-        <p class="team-desc" data-i18n="t1_desc">Diseñador, impresor y el alma detrás de cada modelo. Vive rodeado de filamento PLA y música. Convierte ideas en objetos reales.</p>
-        <div class="team-badge" data-i18n="t1_badge">⚡ El único, el inigualable</div>
-      </div>
-    </div>
-
-    <!-- VALORES -->
-    <div class="about-values rev" style="transition-delay:.12s">
-      <div class="values-tape" data-i18n="ab_val_tape">✨ LO QUE NOS MUEVE</div>
-      <div class="values-grid">
-        <div class="value-item">
-          <span class="value-icon">🚀</span>
-          <div class="value-title" data-i18n="val1_t">CREATIVIDAD SIN LÍMITES</div>
-          <div class="value-desc" data-i18n="val1_d">Cada modelo nace de una idea loca. Aquí nunca decimos "eso no se puede imprimir".</div>
-        </div>
-        <div class="value-item">
-          <span class="value-icon">🤝</span>
-          <div class="value-title" data-i18n="val2_t">COMUNIDAD PRIMERO</div>
-          <div class="value-desc" data-i18n="val2_d">Nuestros usuarios nos inspiran cada semana. Sus ideas dan forma a los próximos modelos.</div>
-        </div>
-        <div class="value-item">
-          <span class="value-icon">💎</span>
-          <div class="value-title" data-i18n="val3_t">CALIDAD OBSESIVA</div>
-          <div class="value-desc" data-i18n="val3_d">No publicamos nada que no hayamos impreso y revisado tres veces. Punto.</div>
-        </div>
-      </div>
-    </div>
-    </div><!-- /about-inner -->
-  </div><!-- /about-box -->
-</section>
-
-<!-- =================== CATALOG =================== -->
+<!-- CATÁLOGO -->
 <div class="cat-layout" id="catalog">
   <aside class="sidebar">
     <div class="nb">
-      <div class="nb-title" data-i18n="fil_cat">📂 Categorías</div>
       <div id="cfilt">
-        <div class="fi on" onclick="fcat(this,'all')"><span data-i18n="cat_all">Todos</span><span class="fi-c">48</span></div>
-        <div class="fi" onclick="fcat(this,'figures')"><span data-i18n="cat_fig">Figuras</span><span class="fi-c">14</span></div>
-        <div class="fi" onclick="fcat(this,'acc')"><span data-i18n="cat_acc">Accesorios</span><span class="fi-c">10</span></div>
-        <div class="fi" onclick="fcat(this,'packs')"><span data-i18n="cat_pac">Packs</span><span class="fi-c">7</span></div>
+        <div class="fi on" onclick="fcat(this,'all')"><span data-i18n="cat_all">Todos</span><span class="fi-c">8</span></div>
+        <div class="fi" onclick="fcat(this,'figures')"><span data-i18n="cat_fig">Figuras</span><span class="fi-c">7</span></div>
+        <div class="fi" onclick="fcat(this,'accesorios')"><span data-i18n="cat_acc">Mis diseños</span><span class="fi-c">1</span></div>
       </div>
     </div>
-    <div class="nb">
-      <div class="nb-title" data-i18n="fil_price">💰 Precio</div>
-      <div class="rng-lbl" data-i18n="price_lbl">Hasta: <span id="pv">$60</span></div>
-      <input type="range" min="0" max="100" value="60" oninput="document.getElementById('pv').textContent='$'+this.value"/>
-    </div>
-    <div class="nb">
-      <div class="nb-title" data-i18n="fil_opts">⚙️ Opciones</div>
-      <div class="tog-row"><span data-i18n="opt_new">Solo nuevos</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
-      <div class="tog-row"><span data-i18n="opt_pop">Populares</span><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
-      <div class="tog-row"><span data-i18n="opt_free">Gratuitos</span><div class="tog" onclick="this.classList.toggle('on')"></div></div>
-    </div>
   </aside>
-
   <main>
     <div class="cat-hdr">
       <div>
-        <h2 class="cat-hdr-title" data-i18n="ctitle">📦 CATÁLOGO VORTIX</h2>
-        <div class="cat-hdr-sub" data-i18n="csub">mostrando 48 productos épicos</div>
+        <h2 class="cat-hdr-title" data-i18n="ctitle">CATALOGO VORTIX</h2>
+        <div class="cat-hdr-sub" data-i18n="csub">8 productos disponibles</div>
       </div>
-      <select class="srt">
-        <option data-i18n="sort_pop">⭐ Populares</option>
-        <option data-i18n="sort_new">🆕 Nuevos</option>
-        <option data-i18n="sort_ch">💸 Precio ↑</option>
-      </select>
     </div>
     <div class="prod-grid" id="pgrid"></div>
-    <div style="text-align:center;margin-top:30px;">
-      <button class="btn-c cyan" onclick="loadMore()" data-i18n="load_more">⬇ Más productos</button>
-    </div>
   </main>
 </div>
 
-<!-- =================== INFO SECTIONS =================== -->
-<div class="info-sections" id="info-sections">
-
-  <!-- CONTACTO -->
-  <div class="info-card rev" style="--ic-color:var(--cyan);--ic-tape:var(--yellow);">
-    <div class="info-card-tape">✉️ ESCRÍBENOS</div>
-    <span class="info-card-icon">📬</span>
-    <div class="info-card-title" data-i18n="cnt_title">CONTACTO</div>
-    <div class="cform" id="cform">
-      <div class="cform-row">
-        <div class="cfield">
-          <label data-i18n="cnt_name">TU NOMBRE</label>
-          <input type="text" id="cf-name" data-i18n-ph="cnt_name_ph" placeholder="Ej: Alex García"/>
+<!-- SOBRE MÍ -->
+<section class="about-section" id="about">
+  <div class="about-box rev">
+    <div class="tc tc1" data-i18n="ab_tc1">EL CREADOR</div>
+    <div class="tc tc2" data-i18n="ab_tc2">desde 2025</div>
+    <div class="about-inner">
+      <div class="about-header rev">
+        <div class="about-eyebrow" data-i18n="ab_eyebrow">EL CREADOR</div>
+        <h2 class="about-title" data-i18n="ab_title">SOBRE MI</h2>
+        <p class="about-subtitle" data-i18n="ab_sub">un apasionado del 3D, los colores y la creatividad detrás de todo esto</p>
+      </div>
+      <div class="about-mission rev" style="transition-delay:.08s">
+        <div class="mission-tape" data-i18n="ab_mission_tape">MI MISION</div>
+        <blockquote class="mission-quote" data-i18n="ab_mission_q">"Quiero que cada persona pueda tener en sus manos el personaje que lleva en la imaginación. El 3D no es solo tecnología — es magia tangible."</blockquote>
+        <div class="mission-author" data-i18n="ab_mission_auth"> Facundo, VortiX Tech Makers</div>
+      </div>
+      <div style="display:flex;justify-content:center;">
+        <div class="team-card rev" style="--tc-color:#00E5FF;--tc-rot:0deg;max-width:320px;width:100%;transition-delay:.1s">
+           <div class="team-avatar" style="display:block;margin-bottom:10px;"><img src="./images/foto.png" alt="Facundo" style="width:1
+        200px;height:200px;border-radius:50%;object-fit:cover;border:3px solid var(--cyan);box-shadow:0 0 16px rgba(0,229,255,.4);"/></div>
+          <div class="team-name" data-i18n="t1_name">FACUNDO</div>
+          <div class="team-role" data-i18n="t1_role">Fundador & Creador</div>
+          <p class="team-desc" data-i18n="t1_desc">Diseñador, impresor y el alma detrás de cada modelo. Vive rodeado de filamento PLA y música. Convierte ideas en objetos reales.</p>
+          <div class="team-badge" data-i18n="t1_badge">El único, el inigualable</div>
         </div>
-        <div class="cfield">
-          <label data-i18n="cnt_email">CORREO</label>
-          <input type="email" id="cf-email" data-i18n-ph="cnt_email_ph" placeholder="tu@correo.com"/>
+      </div>
+      <div class="about-values rev" style="transition-delay:.12s">
+        <div class="values-tape" data-i18n="ab_val_tape">LO QUE ME MUEVE</div>
+        <div class="values-grid">
+          <div class="value-item">
+            <div class="value-title" data-i18n="val1_t">CREATIVIDAD SIN LIMITES</div>
+            <div class="value-desc" data-i18n="val1_d">Cada modelo nace de una idea loca. Aquí nunca digo "eso no se puede imprimir".</div>
+          </div>
+          <div class="value-item">
+            <div class="value-title" data-i18n="val3_t">CALIDAD OBSESIVA</div>
+            <div class="value-desc" data-i18n="val3_d">No publico nada que no haya impreso y revisado tres veces. Punto.</div>
+          </div>
         </div>
       </div>
-      <div class="cfield">
-        <label data-i18n="cnt_subject">ASUNTO</label>
-        <select id="cf-subject">
-          <option data-i18n="cnt_sub1">📦 Mi pedido</option>
-          <option data-i18n="cnt_sub2">🔧 Problema técnico</option>
-          <option data-i18n="cnt_sub3">💡 Sugerencia</option>
-          <option data-i18n="cnt_sub4">🤝 Colaboración</option>
-          <option data-i18n="cnt_sub5">❓ Otro</option>
-        </select>
-      </div>
-      <div class="cfield">
-        <label data-i18n="cnt_msg">MENSAJE</label>
-        <textarea id="cf-msg" data-i18n-ph="cnt_msg_ph" placeholder="Cuéntanos todo..."></textarea>
-      </div>
-      <button class="csend" onclick="sendContact(this)" data-i18n="cnt_send">🚀 Enviar mensaje</button>
-      <div class="cform-ok" id="cform-ok">✅ <span data-i18n="cnt_ok">¡Mensaje enviado! Te respondemos pronto 😊</span></div>
     </div>
   </div>
+</section>
 
-  <!-- CÓMO IMPRIMIR -->
-  <div class="info-card rev" style="--ic-color:var(--orange);--ic-tape:#FF6B35;transition-delay:.1s">
-    <div class="info-card-tape" style="background:var(--orange);color:#fff;">🖨️ TUTORIAL</div>
-    <span class="info-card-icon">🖨️</span>
-    <div class="info-card-title" style="text-shadow:3px 3px 0 #883300;" data-i18n="print_title">CÓMO IMPRIMIR</div>
-    <ul class="print-steps" id="print-steps">
-      <li class="ps">
-        <span class="ps-num">1</span>
-        <div class="ps-content">
-          <div class="ps-title" data-i18n="ps1_t">DESCARGA EL ARCHIVO</div>
-          <div class="ps-desc" data-i18n="ps1_d">Tras la compra, descarga el archivo .STL o .OBJ desde tu perfil en "Mis pedidos".</div>
-          <div class="ps-tip" data-i18n="ps1_tip">💡 Compatible con Cura, PrusaSlicer y Bambu Studio</div>
-        </div>
-      </li>
-      <li class="ps">
-        <span class="ps-num">2</span>
-        <div class="ps-content">
-          <div class="ps-title" data-i18n="ps2_t">ABRE EL SLICER</div>
-          <div class="ps-desc" data-i18n="ps2_d">Importa el archivo en tu programa de laminado favorito y ajusta la escala si lo necesitas.</div>
-          <div class="ps-tip" data-i18n="ps2_tip">🎯 Recomendamos escala 100% para mejores resultados</div>
-        </div>
-      </li>
-      <li class="ps">
-        <span class="ps-num">3</span>
-        <div class="ps-content">
-          <div class="ps-title" data-i18n="ps3_t">CONFIGURA LA IMPRESIÓN</div>
-          <div class="ps-desc" data-i18n="ps3_d">Usa relleno al 15-20%, soportes donde indique el modelo y capa de 0.2mm para buen detalle.</div>
-          <div class="ps-tip" data-i18n="ps3_tip">🌡️ PLA a 200°C, cama a 60°C</div>
-        </div>
-      </li>
-      <li class="ps">
-        <span class="ps-num">4</span>
-        <div class="ps-content">
-          <div class="ps-title" data-i18n="ps4_t">¡A IMPRIMIR!</div>
-          <div class="ps-desc" data-i18n="ps4_d">Lanza la impresión y espera. Las piezas grandes pueden tardar varias horas. ¡Vale la pena!</div>
-          <div class="ps-tip" data-i18n="ps4_tip">⚡ Comparte tu resultado con #VortiXStudio</div>
-        </div>
-      </li>
-    </ul>
-    <div class="print-note">📌 <span data-i18n="print_note">Incluimos instrucciones específicas con cada modelo. Si tienes dudas, ¡contáctanos!</span></div>
-  </div>
-
-</div>
-
-<!-- =================== FOOTER =================== -->
+<!-- FOOTER -->
 <footer>
   <div class="foot-grid">
     <div>
-      <a href="#" class="foot-logo"><img src="./images/logo-claro.png" alt="VortiX Studio" class="logo-img-nav"/></a>
-      <p class="foot-desc" data-i18n="foot_desc">El universo de los modelos 3D para mentes creativas. Diseña, imprime y da vida a tus ideas más épicas.</p>
+      <a href="#" class="foot-logo"><img src="./images/logo-claro.png" alt="VortiX Tech Makers" class="logo-img-nav"/></a>
+      <p class="foot-desc" data-i18n="foot_desc">El universo de los modelos 3D para mentes creativas.</p>
       <div class="socials">
-        <a class="soc" href="#">📸</a><a class="soc" href="#">🎵</a>
-        <a class="soc" href="#">▶️</a><a class="soc" href="#">💬</a><a class="soc" href="#">🐦</a>
+        <a class="soc" href="#">IG</a>
+        <a class="soc" href="#">TK</a>
+        <a class="soc" href="#">YT</a>
+        <a class="soc" href="#">DC</a>
+        <a class="soc" href="#">TW</a>
       </div>
     </div>
     <div class="foot-col">
       <h4 data-i18n="foot_exp">Explorar</h4>
       <ul class="flinks">
-        <li><a href="#" data-i18n="nav_catalog">Catálogo</a></li>
+        <li><a href="#catalog" data-i18n="nav_catalog">Catálogo</a></li>
         <li><a href="#about" data-i18n="nav_about">Sobre Mí</a></li>
       </ul>
     </div>
     <div class="foot-col">
       <h4 data-i18n="foot_help">Ayuda</h4>
       <ul class="flinks">
-        <li><a href="#info-sections" onclick="document.getElementById('info-sections').scrollIntoView({behavior:'smooth'});return false;" data-i18n="foot_cnt">Contacto</a></li>
-        <li><a href="#info-sections" onclick="document.getElementById('info-sections').scrollIntoView({behavior:'smooth'});return false;" data-i18n="foot_how">Cómo imprimir</a></li>
+        <li><a href="#" data-i18n="foot_cnt">Contacto</a></li>
       </ul>
     </div>
     <div class="foot-col">
@@ -327,26 +370,22 @@
     </div>
   </div>
   <div class="foot-btm">
-    <p class="foot-cp">© 2025 <span>VortiX Studio</span>. <span data-i18n="foot_rights">Todos los derechos reservados.</span></p>
-    <p class="foot-cp"><span data-i18n="foot_made">Hecho con</span> <span style="color:var(--cyan)">⚡</span> <span data-i18n="foot_for">para mentes creativas</span></p>
+    <p class="foot-cp">© 2025 <span>VortiX Tech Makers</span>. <span data-i18n="foot_rights">Todos los derechos reservados.</span></p>
+    <p class="foot-cp"><span data-i18n="foot_made">Hecho con</span> <span style="color:var(--cyan)">dedicación</span> <span data-i18n="foot_for">para mentes creativas</span></p>
   </div>
 </footer>
 
-<!-- ====== PRODUCT MODAL ====== -->
+<!-- MODAL PRODUCTO -->
 <div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
   <div class="modal-box" id="modal-box">
-    <div class="modal-tape" id="modal-tape">⚡ PRODUCTO</div>
-    <button class="modal-close" onclick="closeModal()">✕</button>
-
-    <!-- LEFT: carousel -->
+    <div class="modal-tape" id="modal-tape">PRODUCTO</div>
+    <button class="modal-close" onclick="closeModal()">&#10005;</button>
     <div class="modal-left">
       <div class="carousel-track" id="car-track"></div>
-      <button class="car-btn car-prev" onclick="carMove(-1)">‹</button>
-      <button class="car-btn car-next" onclick="carMove(1)">›</button>
+      <button class="car-btn car-prev" onclick="carMove(-1)">&#8249;</button>
+      <button class="car-btn car-next" onclick="carMove(1)">&#8250;</button>
       <div class="car-dots" id="car-dots"></div>
     </div>
-
-    <!-- RIGHT: info -->
     <div class="modal-right">
       <div id="m-badge"></div>
       <div class="modal-cat" id="m-cat"></div>
@@ -362,30 +401,32 @@
       </div>
       <div class="modal-tags" id="m-tags"></div>
       <div class="modal-actions">
-        <button class="btn-c cyan" onclick="modalCart()" id="m-cart-btn">🛒 Añadir al carrito</button>
-        <button class="btn-c yellow" onclick="modalFav()" id="m-fav-btn">🤍 Favorito</button>
+        <button class="btn-c cyan" onclick="modalCart()" id="m-cart-btn">Pedir ahora</button>
+        <button class="btn-c yellow" onclick="modalFav()" id="m-fav-btn">Favorito</button>
+      </div>
+      <div class="modal-pay-info">
+        <span class="pay-badge">Efectivo</span>
+        <span class="pay-badge">Bizum</span>
       </div>
     </div>
   </div>
 </div>
 
-
-
-<!-- ====== LEGAL MODAL ====== -->
+<!-- MODAL LEGAL -->
 <div class="lgo" id="lgo" onclick="lgClose(event)">
   <div class="lgb">
     <div class="lgb-bar"></div>
     <div class="lgh">
       <div class="lgh-left">
-        <div class="lgh-eyebrow" id="lg-eyebrow">LEGAL · VORTIX STUDIO</div>
+        <div class="lgh-eyebrow" id="lg-eyebrow">LEGAL · VORTIX TECH MAKERS</div>
         <div class="lgh-title" id="lg-title">PRIVACIDAD</div>
       </div>
-      <button class="lgx" onclick="closeLegal()">✕</button>
+      <button class="lgx" onclick="closeLegal()">&#10005;</button>
     </div>
     <div class="lgt-row">
-      <button class="lgt on" id="lt-privacy" onclick="lgSwitch('privacy',this)">🔒 PRIVACIDAD</button>
-      <button class="lgt" id="lt-terms" onclick="lgSwitch('terms',this)">📋 TÉRMINOS</button>
-      <button class="lgt" id="lt-cookies" onclick="lgSwitch('cookies',this)">🍪 COOKIES</button>
+      <button class="lgt on" id="lt-privacy" onclick="lgSwitch('privacy',this)">PRIVACIDAD</button>
+      <button class="lgt" id="lt-terms" onclick="lgSwitch('terms',this)">TERMINOS</button>
+      <button class="lgt" id="lt-cookies" onclick="lgSwitch('cookies',this)">COOKIES</button>
     </div>
     <div class="lgbd" id="lg-body"></div>
   </div>
