@@ -28,7 +28,7 @@ html {
 /* ── BODY ───────────────────────────────────────────────────── */
 body {
   font-family: 'Patrick Hand', cursive;
-  font-size: 20px;
+  font-size: 26px;
   background: var(--ink);
   color: var(--paper);
   overflow-x: hidden;
@@ -1280,7 +1280,7 @@ input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.4); }
 
 .team-role {
   font-family: 'Permanent Marker', cursive;
-  font-size: .78rem;
+  font-size: 1.5rem;
   color: var(--yellow);
   letter-spacing: .5px;
   margin: 5px 0 10px;
