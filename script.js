@@ -7,7 +7,7 @@ const T = {
     slider_title: 'PRODUCTOS DESTACADOS', slider_sub: 'Desliza para ver nuestra colección',
     fil_cat: 'Categorías', fil_price: 'Precio', fil_opts: 'Opciones', price_lbl: 'Hasta:',
     cat_all: 'Todos', cat_fig: 'Figuras', cat_acc: 'Mis diseños', cat_pac: 'Packs',
-    ctitle: 'CATALOGO VORTIX', csub: '8 productos disponibles',
+    ctitle: 'CATALOGO VORTIX', csub: '12 productos disponibles',
     btn_v: 'Ver más',
     foot_desc: 'El universo de los modelos 3D para mentes creativas.', foot_exp: 'Explorar',
     foot_help: 'Ayuda', foot_cnt: 'Contacto', foot_leg: 'Legal', foot_priv: 'Privacidad',
@@ -37,7 +37,7 @@ const T = {
     slider_title: 'FEATURED PRODUCTS', slider_sub: 'Slide to explore our collection',
     fil_cat: 'Categories', fil_price: 'Price', fil_opts: 'Options', price_lbl: 'Up to:',
     cat_all: 'All', cat_fig: 'Figures', cat_acc: 'Accessories', cat_pac: 'Packs',
-    ctitle: 'VORTIX CATALOG', csub: '8 products available',
+    ctitle: 'VORTIX CATALOG', csub: '12 products available',
     btn_v: 'See more',
     foot_desc: 'The 3D model universe for creative minds.', foot_exp: 'Explore',
     foot_help: 'Help', foot_cnt: 'Contact', foot_leg: 'Legal', foot_priv: 'Privacy',
@@ -68,7 +68,7 @@ const T = {
     slider_title: 'PRODUTOS DESTACADOS', slider_sub: 'Deslize para ver nossa coleção',
     fil_cat: 'Categorias', fil_price: 'Preço', fil_opts: 'Opções', price_lbl: 'Até:',
     cat_all: 'Todos', cat_fig: 'Figuras', cat_acc: 'Acessórios', cat_pac: 'Packs',
-    ctitle: 'CATALOGO VORTIX', csub: '8 produtos disponíveis',
+    ctitle: 'CATALOGO VORTIX', csub: '12 produtos disponíveis',
     btn_v: 'Ver mais',
     foot_desc: 'O universo dos modelos 3D para mentes criativas.', foot_exp: 'Explorar',
     foot_help: 'Ajuda', foot_cnt: 'Contato', foot_leg: 'Legal', foot_priv: 'Privacidade',
@@ -117,7 +117,6 @@ function toggleTheme() {
   document.getElementById('tbtn').textContent = isLight ? '🌙' : '☀️';
 }
 
-/* ====== PRODUCTS ====== */
 const prods = [
   {
     n: { es: 'Camaleón', en: 'Chameleon', pt: 'Camaleão' },
@@ -207,6 +206,30 @@ const prods = [
     },
     tags: ['Dragon', 'Azul', 'PLA', 'Coleccionable']
   },
+  // ── Nuevos productos ──
+  {
+    n: { es: 'Cuqui', en: 'Cuqui', pt: 'Cuqui' },
+    p: 2.50, cat: 'figures', b: 'new', r: 5, rv: 34, cc: 'cc-p',
+    img: './images/cuqui.png',
+    desc: {
+      es: 'Una figura adorable con acabado detallado. Perfecta para regalar o coleccionar.',
+      en: 'An adorable figure with detailed finish. Perfect for gifting or collecting.',
+      pt: 'Uma figura adorável com acabamento detalhado. Perfeita para presentear ou colecionar.'
+    },
+    tags: ['Cute', 'PLA', 'Coleccionable']
+  },
+  {
+    n: { es: 'Figura Especial', en: 'Special Figure', pt: 'Figura Especial' },
+    p: 3.00, cat: 'figures', b: '', r: 5, rv: 21, cc: 'cc-o',
+    img: './images/otro2.png',          // �fix: añadido ./
+    desc: {
+      es: 'Figura de edición especial con diseño único y acabado premium.',
+      en: 'Special edition figure with unique design and premium finish.',
+      pt: 'Figura de edição especial com design único e acabamento premium.'
+    },
+    tags: ['Edición Especial', 'PLA', 'Premium']
+  },
+  
 ];
 
 function fmtPrice(val) {
@@ -312,17 +335,17 @@ const prodDetails = [
     tags: ['Dragon Bebé', 'PLA Seda', 'Coleccionable']
   },
   {
-    photos: ['./images/rana-cosmica3.png', './images/rana-cosmica1.png', './images/rana-cosmica2.png'],
+    photos: ['./images/rana-cosmica3.png', './images/rana-cosmica2.png'],
     labels: { es: ['Rana galáctica', 'Rana roja', 'Rana azul'], en: ['Galactic frog', 'Red frog', 'Blue frog'], pt: ['Rã galáctica', 'Rã vermelha', 'Rã azul'] },
     tags: ['Articulada', 'PLA', 'Poses Libres']
   },
   {
-    photos: ['./images/salamandra2.png', './images/salamandra1.png', './images/salamandra2.png'],
+    photos: ['./images/salamandra.png', './images/salamandra2.png'],
     labels: { es: ['Salamandra arcoíris', 'Vista frontal', 'Detalle textura'], en: ['Rainbow salamander', 'Front view', 'Texture detail'], pt: ['Salamandra arco-íris', 'Vista frontal', 'Detalhe textura'] },
     tags: ['Articulada', 'Textura Premium', 'PLA']
   },
   {
-    photos: ['./images/diferent1.png', './images/diferent1.png', './images/diferent1.png'],
+    photos: ['./images/diferent1.png', './images/diferent2.png'],
     labels: { es: ['Animales mini', 'Vista lateral', 'Detalle'], en: ['Mini animals', 'Side view', 'Detail'], pt: ['Animais mini', 'Vista lateral', 'Detalhe'] },
     tags: ['Mini', 'Multicolor', 'Regalo']
   },
@@ -340,6 +363,27 @@ const prodDetails = [
     photos: ['./images/dragon-epico.png', './images/dragon1.png', './images/dragon2.png'],
     labels: { es: ['Dragón azul', 'Detalle alas', 'Vista lateral'], en: ['Blue dragon', 'Wing detail', 'Side view'], pt: ['Dragão azul', 'Detalhe asas', 'Vista lateral'] },
     tags: ['Dragon', 'Azul', 'Coleccionable']
+  },
+  // ── Nuevos prodDetails ──
+  {
+    photos: ['./images/cuqui.png'],
+    labels: { es: ['Cuqui'], en: ['Cuqui'], pt: ['Cuqui'] },
+    tags: ['Cute', 'PLA', 'Coleccionable']
+  },
+  {
+    photos: ['./images/otro.png', './images/otro2.png'],
+    labels: { es: ['Figura especial', 'Vista alternativa'], en: ['Special figure', 'Alternative view'], pt: ['Figura especial', 'Vista alternativa'] },
+    tags: ['Edición Especial', 'PLA', 'Premium']
+  },
+  {
+    photos: ['./images/gato.png'],
+    labels: { es: ['Gatitos'], en: ['Kittens'], pt: ['Gatinhos'] },
+    tags: ['Gatos', 'Cute', 'PLA', 'Decoración']
+  },
+  {
+    photos: ['./images/perros.png'],
+    labels: { es: ['Perritos'], en: ['Puppies'], pt: ['Cachorrinhos'] },
+    tags: ['Perros', 'Cute', 'PLA', 'Decoración']
   },
 ];
 
@@ -472,7 +516,6 @@ const LC = {
 <p>Para cualquier consulta puedes escribirnos a <strong>vortixtechmakers@gmail.com</strong>. Los mensajes que nos envíes por correo son gestionados con total confidencialidad y no se comparten con terceros.</p>
 <h3>Legislación aplicable</h3>
 <p>Esta política se rige por el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD). Al no tratarse datos personales, no aplican obligaciones adicionales de registro o notificación.</p>`,
-
       en: `<h3>Informational page</h3>
 <p>This page is purely informational. <strong>VortiX Tech Makers</strong> does not collect, store or process any personal data from its visitors. There are no registration forms, no user accounts, and no tracking systems in use.</p>
 <div class="note">We collect no data. Your visit is completely anonymous.</div>
@@ -482,7 +525,6 @@ const LC = {
 <p>For any enquiry you can write to <strong>vortixtechmakers@gmail.com</strong>. Emails you send us are handled with full confidentiality and are not shared with third parties.</p>
 <h3>Applicable law</h3>
 <p>This policy is governed by Regulation (EU) 2016/679 (GDPR) and applicable national data protection law. As no personal data is processed, no additional registration or notification obligations apply.</p>`,
-
       pt: `<h3>Página informativa</h3>
 <p>Esta página é meramente informativa. A <strong>VortiX Tech Makers</strong> não recolhe, armazena nem processa quaisquer dados pessoais dos seus visitantes. Não existem formulários de registo, contas de utilizador nem sistemas de rastreamento.</p>
 <div class="note">Não recolhemos nenhum dado. A sua visita é completamente anónima.</div>
@@ -522,7 +564,6 @@ const LC = {
 <p>En caso de disputa puedes recurrir a la plataforma de resolución en línea de litigios de la UE (<a href="https://ec.europa.eu/consumers/odr" target="_blank">ec.europa.eu/consumers/odr</a>) o contactarnos directamente en <strong>vortixtechmakers@gmail.com</strong>.</p>
 <h3>Cambios en los términos</h3>
 <p>Podemos actualizar estos términos en cualquier momento. Te notificaremos por correo electrónico con al menos <strong>30 días de antelación</strong> ante cambios sustanciales, conforme a las buenas prácticas europeas de transparencia contractual. El uso continuado de la plataforma implica la aceptación de los nuevos términos.</p>`,
-
       en: `<h3>Acceptance</h3>
 <p>By using <strong>VortiX Tech Makers</strong> you fully accept these terms. Users under 13 require the express consent of a parent or legal guardian, in accordance with Article 8 of the GDPR.</p>
 <div class="note">This platform is for 3D model enthusiasts. Use it with respect.</div>
@@ -545,7 +586,6 @@ const LC = {
 <p>In case of a dispute you may use the EU Online Dispute Resolution platform (<a href="https://ec.europa.eu/consumers/odr" target="_blank">ec.europa.eu/consumers/odr</a>) or contact us directly at <strong>vortixtechmakers@gmail.com</strong>.</p>
 <h3>Changes to terms</h3>
 <p>We may update these terms at any time. We will notify you by email at least <strong>30 days in advance</strong> for substantial changes. Continued use of the platform implies acceptance of the updated terms.</p>`,
-
       pt: `<h3>Aceitação</h3>
 <p>Ao utilizar a <strong>VortiX Tech Makers</strong> aceita na íntegra estes termos. Utilizadores com menos de 13 anos necessitam do consentimento expresso de um progenitor ou representante legal, nos termos do Artigo 8.º do RGPD.</p>
 <div class="note">Esta plataforma é para amantes de modelos 3D. Use-a com respeito.</div>
@@ -595,7 +635,6 @@ const LC = {
 </ul>
 <h3>Contacto</h3>
 <p>Para cualquier consulta sobre cookies escríbenos a <strong>vortixtechmakers@gmail.com</strong>.</p>`,
-
       en: `<h3>What are cookies?</h3>
 <p>Small files stored in your browser to remember preferences and improve your experience on <strong>VortiX Tech Makers</strong>, in accordance with the EU Cookie Directive 2009/136/EC and applicable national law.</p>
 <div class="note">Without technical cookies the site would not work correctly.</div>
@@ -615,7 +654,6 @@ const LC = {
 </ul>
 <h3>Contact</h3>
 <p>For any queries about cookies write to <strong>vortixtechmakers@gmail.com</strong>.</p>`,
-
       pt: `<h3>O que são cookies?</h3>
 <p>Pequenos ficheiros guardados no seu navegador para recordar preferências e melhorar a sua experiência na <strong>VortiX Tech Makers</strong>, em conformidade com a Diretiva 2009/136/CE e a legislação nacional aplicável.</p>
 <div class="note">Sem cookies técnicos o site não funcionaria corretamente.</div>
@@ -719,3 +757,4 @@ function lgClose(e) {
 /* ====== INIT ====== */
 renderProds();
 setLang('es');
+
