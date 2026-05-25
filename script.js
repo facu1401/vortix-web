@@ -13,7 +13,7 @@ const T = {
     foot_help: 'Ayuda', foot_cnt: 'Contacto', foot_leg: 'Legal', foot_priv: 'Privacidad',
     foot_terms: 'Términos', foot_coo: 'Cookies',
     foot_rights: 'Todos los derechos reservados.', foot_made: 'Hecho con', foot_for: 'para mentes creativas',
-    ab_eyebrow: 'EL CREADOR', ab_title: 'SOBRE MI', ab_sub: 'un apasionado del 3D, los colores y la creatividad detrás de todo esto',
+    ab_eyebrow: 'EL CREADOR', ab_title: 'SOBRE MÍ', ab_sub: 'un apasionado del 3D, los colores y la creatividad detrás de todo esto',
     ab_mission_tape: 'MI MISION',
     ab_mission_q: '"Quiero que cada persona pueda tener en sus manos el personaje que lleva en la imaginación. El 3D no es solo tecnología — es magia tangible."',
     ab_mission_auth: '— Facundo, VortiX Tech Makers',
