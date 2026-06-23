@@ -120,7 +120,7 @@ function toggleTheme() {
 const prods = [
   {
     n: { es: 'Camaleón', en: 'Chameleon', pt: 'Camaleão' },
-    p: 3.50, cat: 'figures', b: '', r: 5, rv: 214, cc: 'cc-g',
+    p: 3.00, cat: 'figures', b: '', r: 5, rv: 214, cc: 'cc-g',
     img: './images/camaleon.png',
     desc: {
       es: 'Figura articulada con colores vibrantes y textura realista. Cuerpo segmentado completamente flexible.',
@@ -142,7 +142,7 @@ const prods = [
   },
   {
     n: { es: 'Ranas', en: 'Frogs', pt: 'Rãs' },
-    p: 3.50, cat: 'figures', b: 'new', r: 5, rv: 98, cc: 'cc-o',
+    p: 4.00, cat: 'figures', b: 'new', r: 5, rv: 98, cc: 'cc-o',
     img: './images/rana-cosmica3.png',
     desc: {
       es: 'Set de ranas articuladas con acabado detallado. Patas y brazos completamente móviles.',
@@ -186,7 +186,7 @@ const prods = [
   },
   {
     n: { es: 'Juguetes Antiestrés', en: 'Stress Toys', pt: 'Brinquedos Antiestresse' },
-    p: 3.00, cat: 'accesorios', b: '', r: 5, rv: 67, cc: 'cc-c',
+    p: 4.00, cat: 'accesorios', b: '', r: 5, rv: 67, cc: 'cc-c',
     img: './images/dron.png',
     desc: {
       es: 'Diseñados para aliviar el estrés con formas originales. Perfectos para el escritorio o como regalo.',
@@ -209,7 +209,7 @@ const prods = [
   // ── Nuevos productos ──
   {
     n: { es: 'Cuqui', en: 'Cuqui', pt: 'Cuqui' },
-    p: 2.50, cat: 'figures', b: 'new', r: 5, rv: 34, cc: 'cc-p',
+    p: 1, cat: 'figures', b: 'new', r: 5, rv: 34, cc: 'cc-p',
     img: './images/cuqui.png',
     desc: {
       es: 'Una figura adorable con acabado detallado. Perfecta para regalar o coleccionar.',
@@ -220,8 +220,8 @@ const prods = [
   },
   {
     n: { es: 'Figura Especial', en: 'Special Figure', pt: 'Figura Especial' },
-    p: 3.00, cat: 'figures', b: '', r: 5, rv: 21, cc: 'cc-o',
-    img: './images/otro2.png',          // �fix: añadido ./
+    p: 5.00, cat: 'figures', b: '', r: 5, rv: 21, cc: 'cc-o',
+    img: './images/otro2.png',         
     desc: {
       es: 'Figura de edición especial con diseño único y acabado premium.',
       en: 'Special edition figure with unique design and premium finish.',
