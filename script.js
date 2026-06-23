@@ -371,7 +371,7 @@ const prodDetails = [
     tags: ['Cute', 'PLA', 'Coleccionable']
   },
   {
-    photos: ['./images/otro.png', './images/otro2.png'],
+    photos: ['./images/otro2.png'],
     labels: { es: ['Figura especial', 'Vista alternativa'], en: ['Special figure', 'Alternative view'], pt: ['Figura especial', 'Vista alternativa'] },
     tags: ['Edición Especial', 'PLA', 'Premium']
   },
