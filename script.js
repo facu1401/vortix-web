@@ -1,13 +1,19 @@
 const T = {
   es: {
-    nav_home: 'Inicio', nav_catalog: 'Catálogo', nav_cat: 'Categorías', nav_new: 'Nuevos', nav_about: 'Sobre Mí',
+    nav_home: 'Inicio', nav_catalog: 'Catálogo', nav_cat: 'Categorías', nav_new: 'Nuevos', nav_models: 'Modelos 3D', nav_about: 'Sobre Mí',
+    model_eyebrow: 'EXPLORA EN 3D', model_title: 'MIRA CADA DETALLE', model_intro: 'Gira el modelo y descubre cómo se compone nuestra rana articulada.',
+    model_status: 'Cargando modelo 3D…', model_hint: 'Arrastra para girar · Pellizca para acercar',
+    model_product: 'MODELO DESTACADO', model_frog: 'Rana articulada', model_description: 'Gira y acerca el modelo para comprobar sus detalles desde cualquier ángulo.', model_cta: 'Ver productos',
+    model_dolphin_title: 'Delfín articulado', model_dolphin_description: 'Gira y acerca el delfín para comprobar su forma y sus detalles desde cualquier ángulo.',
+    model_dragon_title: 'Dragón azul', model_dragon_description: 'Gira y acerca el dragón para explorar sus detalles desde cualquier ángulo.',
+    model_dummy13_title: 'Dummy13', model_dummy13_description: 'Explora en 3D las piezas individuales del kit, organizadas para girarlas y revisarlas.',
     hero_chip: 'El universo creativo te espera', hero_l1: 'BIENVENIDO A', hero_l2: 'VORTIX TECH MAKERS', hero_l3: 'donde las ideas toman forma',
     hero_desc: 'Modelos 3D épicos, figuras increíbles y accesorios únicos. Diseñados para ti.',
     hero_cta: 'Explorar catálogo', hero_cta2: 'Sobre Mí', feat_cn: 'DRAGON AZUL', hero_tape: 'NUEVO',
     slider_title: 'PRODUCTOS DESTACADOS', slider_sub: 'Desliza para ver nuestra colección',
     fil_cat: 'Categorías', fil_price: 'Precio', fil_opts: 'Opciones', price_lbl: 'Hasta:',
-    cat_all: 'Todos', cat_fig: 'Figuras', cat_acc: 'Mis diseños', cat_pac: 'Packs',
-    ctitle: 'CATALOGO VORTIX', csub: '12 productos disponibles',
+    cat_all: 'Todos los productos', cat_fig: 'Figuras', cat_acc: 'Mis diseños', cat_pac: 'Packs',
+    ctitle: 'CATALOGO VORTIX', csub: '10 productos disponibles',
     btn_v: 'Ver más',
     foot_desc: 'El universo de los modelos 3D para mentes creativas.', foot_exp: 'Explorar',
     foot_help: 'Ayuda', foot_cnt: 'Contacto', foot_leg: 'Legal', foot_priv: 'Privacidad',
@@ -30,14 +36,20 @@ const T = {
   },
 
   en: {
-    nav_home: 'Home', nav_catalog: 'Catalog', nav_cat: 'Categories', nav_new: 'New', nav_about: 'About',
+    nav_home: 'Home', nav_catalog: 'Catalog', nav_cat: 'Categories', nav_new: 'New', nav_models: '3D models', nav_about: 'About',
+    model_eyebrow: 'EXPLORE IN 3D', model_title: 'SEE EVERY DETAIL', model_intro: 'Rotate the model and discover how our articulated frog is put together.',
+    model_status: 'Loading 3D model…', model_hint: 'Drag to rotate · Pinch to zoom',
+    model_product: 'FEATURED MODEL', model_frog: 'Articulated frog', model_description: 'Rotate and zoom in to check the model details from every angle.', model_cta: 'View products',
+    model_dolphin_title: 'Articulated dolphin', model_dolphin_description: 'Rotate and zoom in to inspect the dolphin from every angle.',
+    model_dragon_title: 'Blue dragon', model_dragon_description: 'Rotate and zoom in to explore the dragon details from every angle.',
+    model_dummy13_title: 'Dummy13', model_dummy13_description: 'Explore the individual kit parts in 3D. They are arranged so you can rotate and inspect them.',
     hero_chip: 'The creative universe awaits', hero_l1: 'WELCOME TO', hero_l2: 'VortiX Tech Makers', hero_l3: 'where ideas take shape',
     hero_desc: 'Epic 3D models, incredible figures & unique accessories. Made for you.',
     hero_cta: 'Explore catalog', hero_cta2: 'About', feat_cn: 'BLUE DRAGON', hero_tape: 'NEW',
     slider_title: 'FEATURED PRODUCTS', slider_sub: 'Slide to explore our collection',
     fil_cat: 'Categories', fil_price: 'Price', fil_opts: 'Options', price_lbl: 'Up to:',
-    cat_all: 'All', cat_fig: 'Figures', cat_acc: 'Accessories', cat_pac: 'Packs',
-    ctitle: 'VORTIX CATALOG', csub: '12 products available',
+    cat_all: 'All products', cat_fig: 'Figures', cat_acc: 'My designs', cat_pac: 'Packs',
+    ctitle: 'VORTIX CATALOG', csub: '10 products available',
     btn_v: 'See more',
     foot_desc: 'The 3D model universe for creative minds.', foot_exp: 'Explore',
     foot_help: 'Help', foot_cnt: 'Contact', foot_leg: 'Legal', foot_priv: 'Privacy',
@@ -61,14 +73,20 @@ const T = {
   },
 
   pt: {
-    nav_home: 'Início', nav_catalog: 'Catálogo', nav_cat: 'Categorias', nav_new: 'Novos', nav_about: 'Sobre Nós',
+    nav_home: 'Início', nav_catalog: 'Catálogo', nav_cat: 'Categorias', nav_new: 'Novos', nav_models: 'Modelos 3D', nav_about: 'Sobre Nós',
+    model_eyebrow: 'EXPLORE EM 3D', model_title: 'VEJA CADA DETALHE', model_intro: 'Gire o modelo e descubra como é composta a nossa rã articulada.',
+    model_status: 'Carregando modelo 3D…', model_hint: 'Arraste para girar · Aperte para ampliar',
+    model_product: 'MODELO EM DESTAQUE', model_frog: 'Rã articulada', model_description: 'Gire e amplie o modelo para conferir os detalhes de todos os ângulos.', model_cta: 'Ver produtos',
+    model_dolphin_title: 'Golfinho articulado', model_dolphin_description: 'Gire e amplie o golfinho para conferir os detalhes de todos os ângulos.',
+    model_dragon_title: 'Dragão azul', model_dragon_description: 'Gire e amplie o dragão para explorar os detalhes de todos os ângulos.',
+    model_dummy13_title: 'Dummy13', model_dummy13_description: 'Explore em 3D as peças individuais do kit, organizadas para girar e inspecionar.',
     hero_chip: 'O universo criativo te espera', hero_l1: 'BEM-VINDO AO', hero_l2: 'VortiX Tech Makers', hero_l3: 'onde as ideias ganham forma',
     hero_desc: 'Modelos 3D épicos, figuras incríveis e acessórios únicos. Feitos para você.',
     hero_cta: 'Explorar catálogo', hero_cta2: 'Sobre Nós', feat_cn: 'DRAGÃO AZUL', hero_tape: 'NOVO',
     slider_title: 'PRODUTOS DESTACADOS', slider_sub: 'Deslize para ver nossa coleção',
     fil_cat: 'Categorias', fil_price: 'Preço', fil_opts: 'Opções', price_lbl: 'Até:',
-    cat_all: 'Todos', cat_fig: 'Figuras', cat_acc: 'Acessórios', cat_pac: 'Packs',
-    ctitle: 'CATALOGO VORTIX', csub: '12 produtos disponíveis',
+    cat_all: 'Todos os produtos', cat_fig: 'Figuras', cat_acc: 'Meus designs', cat_pac: 'Packs',
+    ctitle: 'CATALOGO VORTIX', csub: '10 produtos disponíveis',
     btn_v: 'Ver mais',
     foot_desc: 'O universo dos modelos 3D para mentes criativas.', foot_exp: 'Explorar',
     foot_help: 'Ajuda', foot_cnt: 'Contato', foot_leg: 'Legal', foot_priv: 'Privacidade',
@@ -142,7 +160,7 @@ const prods = [
   },
   {
     n: { es: 'Ranas', en: 'Frogs', pt: 'Rãs' },
-    p: 4.00, cat: 'figures', b: 'new', r: 5, rv: 98, cc: 'cc-o',
+    p: 3.00, cat: 'figures', b: 'new', r: 5, rv: 98, cc: 'cc-o',
     img: './images/rana-cosmica3.png',
     desc: {
       es: 'Set de ranas articuladas con acabado detallado. Patas y brazos completamente móviles.',
@@ -167,9 +185,9 @@ const prods = [
     p: 1.00, cat: 'figures', b: '', r: 5, rv: 43, cc: 'cc-y',
     img: './images/diferent1.png',
     desc: {
-      es: 'Variedad de animales en miniatura impresos con detalle. Perfectos para coleccionar o regalar.',
-      en: 'Variety of miniature animals printed with detail. Perfect for collecting or gifting.',
-      pt: 'Variedade de animais em miniatura impressos com detalhe. Perfeitos para colecionar ou presentear.'
+      es: '1 por 1 € o llévate 3 por 2 €. Variedad de animales en miniatura impresos con detalle, perfectos para coleccionar o regalar.',
+      en: '€1 each or get 3 for €2. A variety of detailed miniature animals, perfect for collecting or gifting.',
+      pt: '1 por 1 € ou leve 3 por 2 €. Variedade de animais em miniatura impressos com detalhe, perfeitos para colecionar ou presentear.'
     },
     tags: ['Mini', 'Multicolor', 'PLA', 'Regalo']
   },
@@ -186,7 +204,7 @@ const prods = [
   },
   {
     n: { es: 'Juguetes Antiestrés', en: 'Stress Toys', pt: 'Brinquedos Antiestresse' },
-    p: 4.00, cat: 'accesorios', b: '', r: 5, rv: 67, cc: 'cc-c',
+    p: 4.00, cat: 'figures', b: '', r: 5, rv: 67, cc: 'cc-c',
     img: './images/dron.png',
     desc: {
       es: 'Diseñados para aliviar el estrés con formas originales. Perfectos para el escritorio o como regalo.',
@@ -209,12 +227,12 @@ const prods = [
   // ── Nuevos productos ──
   {
     n: { es: 'Cuqui', en: 'Cuqui', pt: 'Cuqui' },
-    p: 1, cat: 'figures', b: 'new', r: 5, rv: 34, cc: 'cc-p',
+    p: 1.50, cat: 'figures', b: 'new', r: 5, rv: 34, cc: 'cc-p',
     img: './images/cuqui.png',
     desc: {
-      es: 'Una figura adorable con acabado detallado. Perfecta para regalar o coleccionar.',
-      en: 'An adorable figure with detailed finish. Perfect for gifting or collecting.',
-      pt: 'Uma figura adorável com acabamento detalhado. Perfeita para presentear ou colecionar.'
+      es: '1,50 € cada uno o llévate 3 por 3 €. Una figura adorable con acabado detallado, perfecta para regalar o coleccionar.',
+      en: '€1.50 each or get 3 for €3. An adorable figure with a detailed finish, perfect for gifting or collecting.',
+      pt: '1,50 € cada ou leve 3 por 3 €. Uma figura adorável com acabamento detalhado, perfeita para presentear ou colecionar.'
     },
     tags: ['Cute', 'PLA', 'Coleccionable']
   },
@@ -340,8 +358,8 @@ const prodDetails = [
     tags: ['Articulada', 'PLA', 'Poses Libres']
   },
   {
-    photos: ['./images/salamandra.png', './images/salamandra2.png'],
-    labels: { es: ['Salamandra arcoíris', 'Vista frontal', 'Detalle textura'], en: ['Rainbow salamander', 'Front view', 'Texture detail'], pt: ['Salamandra arco-íris', 'Vista frontal', 'Detalhe textura'] },
+    photos: ['./images/salamandra2.png'],
+    labels: { es: ['Salamandra'], en: ['Salamander'], pt: ['Salamandra'] },
     tags: ['Articulada', 'Textura Premium', 'PLA']
   },
   {
@@ -757,4 +775,32 @@ function lgClose(e) {
 /* ====== INIT ====== */
 renderProds();
 setLang('es');
+
+/* ====== 3D PRODUCT EXPLORER ====== */
+function setupModelViewer(viewerId, statusId) {
+  const viewer = document.getElementById(viewerId);
+  const stage = viewer?.closest('.model-stage');
+  const status = document.getElementById(statusId);
+  if (!viewer || !stage) return;
+
+  viewer.addEventListener('load', () => {
+    stage.classList.add('is-loaded');
+    if (status) status.textContent = '';
+  });
+  viewer.addEventListener('error', () => {
+    stage.classList.remove('is-loaded');
+    if (status) {
+      status.textContent = lang === 'en'
+        ? '3D model unavailable. Check that its GLB file is present in the models folder.'
+        : lang === 'pt'
+          ? 'Modelo 3D indisponível. Verifique se o arquivo GLB está na pasta models.'
+          : 'Modelo 3D no disponible. Comprueba que su archivo GLB esté en la carpeta models.';
+    }
+  });
+}
+
+setupModelViewer('frogModel', 'modelStatus');
+setupModelViewer('dolphinModel', 'dolphinModelStatus');
+setupModelViewer('dragonModel', 'dragonModelStatus');
+setupModelViewer('dummy13Model', 'dummy13ModelStatus');
 

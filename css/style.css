@@ -1581,6 +1581,46 @@ footer {
   transition: opacity .6s ease, transform .6s cubic-bezier(.34, 1.56, .64, 1);
 }
 
+/* ── 3D MODEL EXPLORER ──────────────────────────────────────── */
+.model-section { max-width: 1440px; margin: 0 auto 80px; padding: 0 20px; }
+.model-heading { text-align: center; margin: 0 auto 28px; }
+.model-heading .about-title { display: block; width: fit-content; margin: 0 auto; }
+.model-intro { max-width: 640px; margin: 12px auto 0; color: rgba(255, 254, 242, .62); font: 1.25rem/1.5 'Caveat', cursive; }
+[data-theme="light"] .model-intro { color: rgba(26, 26, 46, .62); }
+.model-card { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr); overflow: hidden; border: 3px solid var(--cyan); border-radius: 24px; background: rgba(255, 254, 242, .04); box-shadow: 8px 8px 0 var(--purple); }
+[data-theme="light"] .model-card { background: rgba(255, 255, 255, .78); }
+.model-stage { min-width: 0; min-height: 440px; position: relative; background-color: rgba(0, 229, 255, .04); background-image: radial-gradient(rgba(0, 229, 255, .12) 1px, transparent 1px); background-size: 22px 22px; }
+.model-stage model-viewer { display: block; width: 100%; height: 440px; --poster-color: transparent; --progress-bar-color: var(--cyan); --progress-mask: var(--purple); }
+.model-status { position: absolute; left: 50%; top: 50%; width: min(80%, 390px); transform: translate(-50%, -50%); padding: 10px 16px; border: 1px dashed rgba(0, 229, 255, .45); border-radius: 12px; background: rgba(26, 26, 46, .84); color: var(--paper); text-align: center; font: 1.1rem/1.4 'Caveat', cursive; pointer-events: none; }
+.model-stage.is-loaded .model-status { display: none; }
+.model-hint { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); padding: 5px 12px; border-radius: 999px; background: rgba(26, 26, 46, .78); color: var(--paper); white-space: nowrap; font: 1rem 'Caveat', cursive; pointer-events: none; }
+.model-details { padding: clamp(24px, 4vw, 48px); align-self: center; }
+.model-product-tag, .model-part-label { color: var(--cyan); font: .8rem 'Permanent Marker', cursive; letter-spacing: 1.5px; }
+.model-details h3 { margin: 10px 0; color: var(--paper); font: 2.2rem/1.05 'Bangers', cursive; letter-spacing: 1px; text-shadow: 3px 3px 0 var(--purple); }
+[data-theme="light"] .model-details h3 { color: #1a1a2e; }
+.model-details > p { margin-bottom: 24px; color: rgba(255, 254, 242, .65); font: 1.2rem/1.5 'Caveat', cursive; }
+[data-theme="light"] .model-details > p { color: rgba(26, 26, 46, .65); }
+.model-parts { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 26px; }
+.model-part-btn { border: 2px dashed rgba(0, 229, 255, .45); border-radius: 999px; padding: 8px 13px; background: rgba(0, 229, 255, .06); color: var(--paper); font: 1rem 'Caveat', cursive; cursor: pointer; transition: transform .2s, background .2s, border-color .2s; }
+[data-theme="light"] .model-part-btn { color: #1a1a2e; }
+.model-part-btn:hover { transform: translateY(-2px); border-color: var(--cyan); }
+.model-part-btn.active { background: var(--cyan); border-style: solid; color: var(--ink); font-weight: 700; }
+.model-cta { display: inline-block; }
+@media (max-width: 760px) {
+  .model-card { grid-template-columns: minmax(0, 1fr); }
+  .model-stage, .model-stage model-viewer { min-height: 340px; height: 340px; }
+  .model-details { padding: 28px 24px 30px; }
+}
+@media (max-width: 500px) {
+  .model-section { padding: 0 12px; margin-bottom: 56px; }
+  .model-stage, .model-stage model-viewer { min-height: 280px; height: 280px; }
+  .model-details { padding: 24px 18px; }
+  .model-details h3 { font-size: 1.9rem; }
+  .model-parts { gap: 6px; }
+  .model-part-btn { padding: 7px 10px; }
+  .model-hint { max-width: calc(100% - 20px); font-size: .9rem; }
+}
+
 /* ── SCROLLBAR ──────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--ink); }

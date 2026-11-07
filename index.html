@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./css/modal.css">
   <link rel="stylesheet" href="./css/style_web.css">
   <link rel="stylesheet" href="./css/media-queries.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
 
 </head>
 
@@ -29,6 +30,7 @@
       <nav>
         <a href="#" class="active" data-i18n="nav_home">Inicio</a>
         <a href="#catalog" data-i18n="nav_catalog">Catálogo</a>
+        <a href="#modelos-3d" data-i18n="nav_models">Modelos 3D</a>
         <a href="#about" data-i18n="nav_about">Sobre Mí</a>
       </nav>
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-left:auto;">
@@ -194,11 +196,7 @@
     <aside class="sidebar">
       <div class="nb">
         <div id="cfilt">
-          <div class="fi on" onclick="fcat(this,'all')"><span data-i18n="cat_all">Todos</span><span
-              class="fi-c">8</span></div>
-          <div class="fi" onclick="fcat(this,'figures')"><span data-i18n="cat_fig">Figuras</span><span
-              class="fi-c">7</span></div>
-          <div class="fi" onclick="fcat(this,'accesorios')"><span data-i18n="cat_acc">Mis diseños</span><span
+          <div class="fi on" onclick="fcat(this,'all')"><span data-i18n="cat_all">Todos los productos</span><span
               class="fi-c">10</span></div>
         </div>
       </div>
@@ -207,12 +205,111 @@
       <div class="cat-hdr">
         <div>
           <h2 class="cat-hdr-title" data-i18n="ctitle">CATÁLOGO VORTIX</h2>
-          <div class="cat-hdr-sub" data-i18n="csub">8 productos disponibles</div>
+          <div class="cat-hdr-sub" data-i18n="csub">10 productos disponibles</div>
         </div>
       </div>
       <div class="prod-grid" id="pgrid"></div>
     </main>
   </div>
+
+  <!-- VISOR DE MODELOS 3D -->
+  <section class="model-section rev" id="modelos-3d">
+    <div class="model-heading">
+      <div class="about-eyebrow" data-i18n="model_eyebrow">EXPLORA EN 3D</div>
+      <h2 class="about-title" data-i18n="model_title">MIRA CADA DETALLE</h2>
+      <p class="model-intro" data-i18n="model_intro">Gira el modelo y descubre cómo se compone nuestra rana articulada.</p>
+    </div>
+    <div class="model-card">
+      <div class="model-stage">
+        <model-viewer id="frogModel" src="./models/rana-completa.glb" alt="Modelo 3D de rana articulada"
+          camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1" exposure="1"
+          interaction-prompt="auto" aria-label="Visor interactivo del modelo de rana">
+        </model-viewer>
+        <div class="model-status" id="modelStatus" role="status" data-i18n="model_status">
+          Cargando modelo 3D…
+        </div>
+        <div class="model-hint" data-i18n="model_hint">Arrastra para girar · Pellizca para acercar</div>
+      </div>
+      <div class="model-details">
+        <div class="model-product-tag" data-i18n="model_product">MODELO DESTACADO</div>
+        <h3 data-i18n="model_frog">Rana articulada</h3>
+        <p data-i18n="model_description">Gira y acerca el modelo para comprobar sus detalles desde cualquier ángulo.</p>
+        <a href="#catalog" class="btn-c yellow model-cta" data-i18n="model_cta">Ver productos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="model-section rev" id="modelo-delfin">
+    <div class="model-heading">
+      <div class="about-eyebrow" data-i18n="model_eyebrow">EXPLORA EN 3D</div>
+      <h2 class="about-title" data-i18n="model_dolphin_title">Delfín articulado</h2>
+      <p class="model-intro" data-i18n="model_dolphin_description">Gira y acerca el delfín para comprobar su forma y sus detalles desde cualquier ángulo.</p>
+    </div>
+    <div class="model-card">
+      <div class="model-stage">
+        <model-viewer id="dolphinModel" src="./models/delfin.glb" alt="Modelo 3D de delfín articulado" loading="lazy"
+          camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1" exposure="1"
+          interaction-prompt="auto" aria-label="Visor interactivo del modelo de delfín">
+        </model-viewer>
+        <div class="model-status" id="dolphinModelStatus" role="status" data-i18n="model_status">Cargando modelo 3D…</div>
+        <div class="model-hint" data-i18n="model_hint">Arrastra para girar · Pellizca para acercar</div>
+      </div>
+      <div class="model-details">
+        <div class="model-product-tag" data-i18n="model_product">MODELO DESTACADO</div>
+        <h3 data-i18n="model_dolphin_title">Delfín articulado</h3>
+        <p data-i18n="model_dolphin_description">Gira y acerca el delfín para comprobar su forma y sus detalles desde cualquier ángulo.</p>
+        <a href="#catalog" class="btn-c yellow model-cta" data-i18n="model_cta">Ver productos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="model-section rev" id="modelo-dragon">
+    <div class="model-heading">
+      <div class="about-eyebrow" data-i18n="model_eyebrow">EXPLORA EN 3D</div>
+      <h2 class="about-title" data-i18n="model_dragon_title">Dragón azul</h2>
+      <p class="model-intro" data-i18n="model_dragon_description">Gira y acerca el dragón para explorar sus detalles desde cualquier ángulo.</p>
+    </div>
+    <div class="model-card">
+      <div class="model-stage">
+        <model-viewer id="dragonModel" src="./models/dragon.glb" alt="Modelo 3D de dragón azul" loading="lazy"
+          camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1" exposure="1"
+          interaction-prompt="auto" aria-label="Visor interactivo del modelo de dragón">
+        </model-viewer>
+        <div class="model-status" id="dragonModelStatus" role="status" data-i18n="model_status">Cargando modelo 3D…</div>
+        <div class="model-hint" data-i18n="model_hint">Arrastra para girar · Pellizca para acercar</div>
+      </div>
+      <div class="model-details">
+        <div class="model-product-tag" data-i18n="model_product">MODELO DESTACADO</div>
+        <h3 data-i18n="model_dragon_title">Dragón azul</h3>
+        <p data-i18n="model_dragon_description">Gira y acerca el dragón para explorar sus detalles desde cualquier ángulo.</p>
+        <a href="#catalog" class="btn-c yellow model-cta" data-i18n="model_cta">Ver productos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="model-section rev" id="modelo-dummy13">
+    <div class="model-heading">
+      <div class="about-eyebrow" data-i18n="model_eyebrow">EXPLORA EN 3D</div>
+      <h2 class="about-title" data-i18n="model_dummy13_title">Dummy13</h2>
+      <p class="model-intro" data-i18n="model_dummy13_description">Explora en 3D las piezas individuales del kit, organizadas para girarlas y revisarlas.</p>
+    </div>
+    <div class="model-card">
+      <div class="model-stage">
+        <model-viewer id="dummy13Model" src="./models/dummy13.glb" alt="Modelo 3D Dummy 13" loading="lazy"
+          camera-controls touch-action="pan-y" auto-rotate shadow-intensity="1" exposure="1"
+          interaction-prompt="auto" aria-label="Visor interactivo del modelo Dummy 13">
+        </model-viewer>
+        <div class="model-status" id="dummy13ModelStatus" role="status" data-i18n="model_status">Cargando modelo 3D…</div>
+        <div class="model-hint" data-i18n="model_hint">Arrastra para girar · Pellizca para acercar</div>
+      </div>
+      <div class="model-details">
+        <div class="model-product-tag" data-i18n="model_product">MODELO DESTACADO</div>
+        <h3 data-i18n="model_dummy13_title">Dummy13</h3>
+        <p data-i18n="model_dummy13_description">Explora en 3D las piezas individuales del kit, organizadas para girarlas y revisarlas.</p>
+        <a href="#catalog" class="btn-c yellow model-cta" data-i18n="model_cta">Ver productos</a>
+      </div>
+    </div>
+  </section>
 
   <!-- SOBRE MÍ -->
   <section class="about-section" id="about">
