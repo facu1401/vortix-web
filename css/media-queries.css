@@ -64,7 +64,7 @@
 /* ── ≤ 700px : nav oculto, sidebar y footer en una columna ─── */
 @media (max-width: 700px) {
   nav {
-    display: none;
+    display: flex;
   }
 
   .sidebar {
@@ -148,4 +148,92 @@
   .srch input {
     width: 90px;
   }
+}
+
+/* Mobile layout refinements: preserve the sketchbook visual language. */
+@media (max-width: 700px) {
+  body { font-size: 20px; }
+  header { padding: 6px 0; }
+  .hdr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; padding: 0 14px; }
+  .logo-img-nav { height: 58px; }
+  .hdr > div { grid-column: 2; grid-row: 1; margin-left: 0 !important; flex-wrap: nowrap !important; gap: 6px !important; }
+  nav { display: flex; grid-column: 1 / -1; grid-row: 2; justify-content: center; gap: 4px; flex-wrap: nowrap; }
+  nav a { font-size: 1.05rem; padding: 3px 10px; }
+  .lang-btn { padding: 4px 7px; font-size: 1rem; }
+  .theme-btn { width: 34px; height: 34px; font-size: 1.25rem; }
+  .hero { min-height: auto; margin-top: 108px; padding: 48px 18px 56px; }
+  .hero-inner { gap: 34px; }
+  .hero-h1 { font-size: clamp(2.35rem, 10vw, 3.6rem); letter-spacing: 1px; }
+  .h1-l2 { max-width: 100%; overflow-wrap: anywhere; }
+  .hero-tagline { font-size: 1.35rem; }
+  .hero-btns { justify-content: center; flex-wrap: wrap; gap: 12px; }
+  .hmc { max-width: min(100%, 330px); padding: 18px; }
+  .hmc img { height: auto !important; aspect-ratio: 1 / 1; object-fit: contain !important; }
+  .hmc-name { font-size: 1.65rem; }
+  .cat-layout { padding: 0 16px 56px; gap: 20px; }
+  .sidebar { display: block; }
+  .nb { padding: 12px; }
+  .nb::before { display: none; }
+  #cfilt { display: flex; flex-wrap: wrap; gap: 6px; }
+  .fi { flex: 1 1 auto; justify-content: center; gap: 8px; padding: 7px 10px; }
+  .cat-hdr { margin-bottom: 16px; }
+  .cat-hdr-title { font-size: 1.75rem; }
+  .prod-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .pbody { padding: 11px; }
+  .pfooter { gap: 8px; flex-wrap: wrap; }
+  .about-section { padding: 0 16px; margin-bottom: 56px; }
+  .about-box { padding: 36px 18px 30px; }
+  .about-inner { gap: 34px; }
+  .about-mission { padding: 28px 20px 22px; }
+  .mission-quote { font-size: 1.35rem; }
+  .about-values { padding: 30px 16px 20px; }
+  .team-card { width: 100%; }
+  .team-role { font-size: 1.15rem; }
+  .value-desc { font-size: 1.25rem; }
+  .foot-grid { gap: 28px; }
+  footer { padding: 38px 18px 24px; }
+  .slider-wrap { padding: 0 16px; margin-bottom: 56px; }
+  .slider-title { letter-spacing: 1.5px; }
+  .slide { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 28px 20px 18px; text-align: center; }
+  .slide-img img { width: min(58vw, 220px); height: min(58vw, 220px); }
+  .slide-info { padding-left: 0; }
+  .slide-desc { margin-bottom: 14px; }
+  .slide-price { font-size: 1.9rem; }
+  .slide-info br { display: none; }
+  .slider-controls { padding: 14px 0 18px; }
+  .sl-dots { gap: 6px; }
+  .sl-dot { width: 8px; height: 8px; }
+}
+
+@media (max-width: 680px) {
+  .modal-overlay { padding: 12px; }
+  .modal-box { max-height: calc(100dvh - 24px); }
+  .modal-left { min-height: 190px; }
+  .carousel-slide { font-size: 6rem; }
+}
+
+@media (max-width: 500px) {
+  body { font-size: 18px; }
+  .hero { margin-top: 104px; padding: 40px 16px 48px; }
+  .hero-h1 { font-size: clamp(2.1rem, 10vw, 2.8rem); }
+  .doodle-chip { font-size: .85rem; }
+  .hero-btns .btn-c { width: 100%; max-width: 280px; }
+  .prod-grid { grid-template-columns: minmax(0, 1fr); max-width: 360px; margin: 0 auto; }
+  .pimg { min-height: 190px; }
+  .about-section { padding: 0 12px; }
+  .about-box { padding: 34px 14px 26px; }
+  .tc1 { right: 12px; }
+  .tc2 { left: 12px; }
+  .team-avatar img { max-width: 100%; }
+  .lgt-row { gap: 6px; }
+  .lgt { padding-left: 8px; padding-right: 8px; font-size: .8rem; }
+}
+
+@media (max-width: 360px) {
+  .hdr { padding: 0 10px; gap: 2px 8px; }
+  .logo-img-nav { height: 48px; }
+  nav a { font-size: .95rem; padding: 2px 7px; }
+  .lang-btn { padding: 3px 5px; }
+  .theme-btn { width: 30px; height: 30px; }
+  .hero-h1 { font-size: 2rem; }
 }
