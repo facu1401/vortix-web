@@ -195,7 +195,7 @@
   .slider-wrap { padding: 0 16px; margin-bottom: 56px; }
   .slider-title { letter-spacing: 1.5px; }
   .slide { grid-template-columns: minmax(0, 1fr); gap: 22px; padding: 28px 20px 18px; text-align: center; }
-  .slide-img img { width: min(58vw, 220px); height: min(58vw, 220px); }
+  .slide-img img { width: min(78vw, 320px); height: min(78vw, 320px); }
   .slide-info { padding-left: 0; }
   .slide-desc { margin-bottom: 14px; }
   .slide-price { font-size: 1.9rem; }
